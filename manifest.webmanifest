@@ -1,0 +1,9 @@
+{
+  "name": "VIVUM — Хронометраж",
+  "short_name": "VIVUM Хроно",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f7",
+  "theme_color": "#111827",
+  "lang": "ru"
+}
