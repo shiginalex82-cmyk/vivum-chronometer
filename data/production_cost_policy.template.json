@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "currency": "RUB",
+  "overhead": {
+    "method": null,
+    "percent": null,
+    "amount": null,
+    "base": "DIRECT_PRODUCTION_COST",
+    "source": null
+  },
+  "notes": "Пустой шаблон. Процент задаётся числом 15 для 15%. Автоподстановки запрещены."
+}

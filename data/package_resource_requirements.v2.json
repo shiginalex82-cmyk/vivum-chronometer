@@ -1,0 +1,576 @@
+{
+  "schema_version": "2.0",
+  "packages": [
+    {
+      "workPackageCode": "EL-RI-001",
+      "name": "Подрозетники — твёрдые оштукатуренные стены",
+      "tools": [
+        {
+          "resourceId": "TL-CROWN68",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-DRILL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LASER",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MARK",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MIX",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-TAPE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-VAC",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-001-M01",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-05"
+          ],
+          "quantityDriver": "primary_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-001-M02",
+          "mode": "ONE_OF",
+          "resourceIds": [
+            "MT-ALABASTER",
+            "MT-GYPSUM",
+            "MT-COMPOUND-OTHER"
+          ],
+          "quantityDriver": "package_batch",
+          "multiplier": null,
+          "consumptionStatus": "MEASURE_REQUIRED",
+          "note": "Расход состава определяется фактически/по утверждённой норме расхода."
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-002",
+      "name": "Подрозетники — полые стены / каркасная система",
+      "tools": [
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HOLLOW68",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LASER",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MARK",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-TAPE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-VAC",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-002-M01",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-27"
+          ],
+          "quantityDriver": "primary_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-003",
+      "name": "Кабель по потолку — одиночная линия",
+      "tools": [
+        {
+          "resourceId": "TL-ACCESS",
+          "mode": "CONDITIONAL",
+          "note": "Требуется при высоте/условиях, исключающих безопасную работу с пола."
+        },
+        {
+          "resourceId": "TL-GUN",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LABEL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LASER",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MARK",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-TAPE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-UNWIND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-003-M01",
+          "mode": "ONE_OF",
+          "resourceIds": [
+            "MT-2689-01",
+            "MT-2689-02",
+            "MT-2689-03",
+            "MT-2689-04",
+            "MT-2689-11",
+            "MT-2689-36",
+            "MT-2689-40"
+          ],
+          "quantityDriver": "route_length",
+          "multiplier": null,
+          "consumptionStatus": "RESERVE_RULE_REQUIRED",
+          "note": "Выбирается кабель конкретной линии; требуется правило запаса."
+        },
+        {
+          "requirementId": "EL-RI-003-M02",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-06"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-003-M03",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-07"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-003-M04",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-12"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-003-M05",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-30"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": "Газовый баллон нормируется через фактический расход/ресурс баллона."
+        },
+        {
+          "requirementId": "EL-RI-003-M06",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-MARK"
+          ],
+          "quantityDriver": "line_end_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-004",
+      "name": "Кабель по потолку — группа линий / пучок",
+      "tools": [
+        {
+          "resourceId": "TL-ACCESS",
+          "mode": "CONDITIONAL",
+          "note": "Требуется при высоте/условиях, исключающих безопасную работу с пола."
+        },
+        {
+          "resourceId": "TL-GUN",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LABEL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LASER",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MARK",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-TAPE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-UNWIND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-004-M01",
+          "mode": "ONE_OR_MORE_OF",
+          "resourceIds": [
+            "MT-2689-01",
+            "MT-2689-02",
+            "MT-2689-03",
+            "MT-2689-04",
+            "MT-2689-11",
+            "MT-2689-36",
+            "MT-2689-40"
+          ],
+          "quantityDriver": null,
+          "multiplier": null,
+          "consumptionStatus": "FORMULA_REQUIRED",
+          "note": "Количество = сумма длин выбранных линий с утверждёнными запасами."
+        },
+        {
+          "requirementId": "EL-RI-004-M02",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-06"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-004-M03",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-07"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-004-M04",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-12"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-004-M05",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-2689-30"
+          ],
+          "quantityDriver": "fastener_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-004-M06",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-MARK"
+          ],
+          "quantityDriver": "secondary_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-005",
+      "name": "Коммутационная коробка — монтаж + завод и маркировка кабелей",
+      "tools": [
+        {
+          "resourceId": "TL-DRILL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LABEL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LASER",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MARK",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-TAPE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-005-M01",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-JBOX"
+          ],
+          "quantityDriver": "primary_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-005-M02",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-MARK"
+          ],
+          "quantityDriver": "secondary_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-006",
+      "name": "Коммутация коробки розеточной сети",
+      "tools": [
+        {
+          "resourceId": "TL-CRIMP",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-HEAT",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-STRIP",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-006-M01",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-GML"
+          ],
+          "quantityDriver": "secondary_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        },
+        {
+          "requirementId": "EL-RI-006-M02",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-TTK"
+          ],
+          "quantityDriver": "secondary_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": "Нужна длина ТТК на одно соединение."
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-007",
+      "name": "Коммутация коробки освещения",
+      "tools": [
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-STRIP",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-007-M01",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-WAGO"
+          ],
+          "quantityDriver": "secondary_qty",
+          "multiplier": 1,
+          "consumptionStatus": "DRAFT",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-008",
+      "name": "Штробление — вертикальный опуск к подрозетнику",
+      "tools": [
+        {
+          "resourceId": "TL-CHASE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-CHISEL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LASER",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-MARK",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-TAPE",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-VAC",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": []
+    },
+    {
+      "workPackageCode": "EL-RI-009",
+      "name": "Заведение кабеля в подрозетник после фиксации",
+      "tools": [
+        {
+          "resourceId": "TL-HAND",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-LABEL",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        },
+        {
+          "resourceId": "TL-VAC",
+          "mode": "REQUIRED_CAPABILITY",
+          "note": ""
+        }
+      ],
+      "materials": [
+        {
+          "requirementId": "EL-RI-009-M01",
+          "mode": "REQUIRED",
+          "resourceIds": [
+            "MT-MARK"
+          ],
+          "quantityDriver": "secondary_qty",
+          "multiplier": null,
+          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

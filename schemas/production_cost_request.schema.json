@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivum.local/schemas/production_cost_request.schema.json",
+  "title": "VIVUM Production Cost Request",
+  "type": "object",
+  "required": [
+    "productionEstimateId"
+  ],
+  "properties": {
+    "productionEstimateId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "includeOverhead": {
+      "type": "boolean",
+      "default": true
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "resourceId",
+          "quantity",
+          "unit",
+          "costResponsibility"
+        ],
+        "properties": {
+          "resourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "costResponsibility": {
+            "type": "string",
+            "enum": [
+              "VIVUM",
+              "CUSTOMER",
+              "EXTERNAL"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "toolId",
+          "quantity",
+          "rateBasis"
+        ],
+        "properties": {
+          "toolId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0
+          },
+          "rateBasis": {
+            "type": "string",
+            "enum": [
+              "hour",
+              "use",
+              "day",
+              "package"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "logistics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rateCode",
+          "quantity",
+          "unit"
+        ],
+        "properties": {
+          "rateCode": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "directCosts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category",
+          "name",
+          "amount"
+        ],
+        "properties": {
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

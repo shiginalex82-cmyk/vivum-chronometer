@@ -43,6 +43,7 @@ materials=[
  {'id':'MT-2689-30','name':'Газовый баллон для монтажных пистолетов 165 мм','source':'Счёт №2689','position':'30','type':'consumable'},
  {'id':'MT-ALABASTER','name':'Алебастр / быстротвердеющий гипсовый состав','source':'generic','position':None,'type':'compound'},
  {'id':'MT-GYPSUM','name':'Гипсовая штукатурка / медленный монтажный состав','source':'generic','position':None,'type':'compound'},
+ {'id':'MT-COMPOUND-OTHER','name':'Иной согласованный монтажный состав','source':'generic','position':None,'type':'compound'},
  {'id':'MT-JBOX','name':'Коммутационная коробка требуемого типа и размера','source':'project','position':None,'type':'product'},
  {'id':'MT-MARK','name':'Материал для маркировки кабелей','source':'generic','position':None,'type':'consumable'},
  {'id':'MT-GML','name':'Гильза медная ГМЛ требуемого сечения','source':'generic','position':None,'type':'connector'},
@@ -300,3 +301,60 @@ with (DATA/'package_resource_matrix.v1.csv').open('w',newline='',encoding='utf-8
     for r0 in requirements:
         for tid in r0['toolIds']: w.writerow([r0['workPackageCode'],r0['name'],'tool',tid,tool_by[tid]['name']])
         for mid in r0['materialIds']: w.writerow([r0['workPackageCode'],r0['name'],'material',mid,mat_by[mid]['name']])
+
+# Resource requirements v2: readiness semantics and future cost coverage.
+def req(rid,mode,resource_ids,driver=None,multiplier=None,status='DRAFT',note=''):
+    return {'requirementId':rid,'mode':mode,'resourceIds':resource_ids,'quantityDriver':driver,
+            'multiplier':multiplier,'consumptionStatus':status,'note':note}
+material_requirements={
+ 'EL-RI-001':[
+   req('EL-RI-001-M01','REQUIRED',['MT-2689-05'],'primary_qty',1),
+   req('EL-RI-001-M02','ONE_OF',['MT-ALABASTER','MT-GYPSUM','MT-COMPOUND-OTHER'],'package_batch',None,'MEASURE_REQUIRED','Расход состава определяется фактически/по утверждённой норме расхода.')
+ ],
+ 'EL-RI-002':[
+   req('EL-RI-002-M01','REQUIRED',['MT-2689-27'],'primary_qty',1)
+ ],
+ 'EL-RI-003':[
+   req('EL-RI-003-M01','ONE_OF',CABLE_IDS,'route_length',None,'RESERVE_RULE_REQUIRED','Выбирается кабель конкретной линии; требуется правило запаса.'),
+   req('EL-RI-003-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1),
+   req('EL-RI-003-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1),
+   req('EL-RI-003-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1),
+   req('EL-RI-003-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED','Газовый баллон нормируется через фактический расход/ресурс баллона.'),
+   req('EL-RI-003-M06','REQUIRED',['MT-MARK'],'line_end_qty',None,'CONSUMPTION_RULE_REQUIRED')
+ ],
+ 'EL-RI-004':[
+   req('EL-RI-004-M01','ONE_OR_MORE_OF',CABLE_IDS,None,None,'FORMULA_REQUIRED','Количество = сумма длин выбранных линий с утверждёнными запасами.'),
+   req('EL-RI-004-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1),
+   req('EL-RI-004-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1),
+   req('EL-RI-004-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1),
+   req('EL-RI-004-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED'),
+   req('EL-RI-004-M06','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED')
+ ],
+ 'EL-RI-005':[
+   req('EL-RI-005-M01','REQUIRED',['MT-JBOX'],'primary_qty',1),
+   req('EL-RI-005-M02','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED')
+ ],
+ 'EL-RI-006':[
+   req('EL-RI-006-M01','REQUIRED',['MT-GML'],'secondary_qty',1),
+   req('EL-RI-006-M02','REQUIRED',['MT-TTK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED','Нужна длина ТТК на одно соединение.')
+ ],
+ 'EL-RI-007':[
+   req('EL-RI-007-M01','REQUIRED',['MT-WAGO'],'secondary_qty',1)
+ ],
+ 'EL-RI-008':[],
+ 'EL-RI-009':[
+   req('EL-RI-009-M01','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED')
+ ]
+}
+requirements_v2=[]
+for p in packages:
+    po=[x for x in ops if x['package_code']==p['code']]
+    tids=sorted({v for x in po for v in x['tool_ids']})
+    tool_reqs=[]
+    for tid in tids:
+        mode='CONDITIONAL' if tid=='TL-ACCESS' else 'REQUIRED_CAPABILITY'
+        note='Требуется при высоте/условиях, исключающих безопасную работу с пола.' if tid=='TL-ACCESS' else ''
+        tool_reqs.append({'resourceId':tid,'mode':mode,'note':note})
+    requirements_v2.append({'workPackageCode':p['code'],'name':p['name'],'tools':tool_reqs,
+                            'materials':material_requirements[p['code']]})
+(DATA/'package_resource_requirements.v2.json').write_text(json.dumps({'schema_version':'2.0','packages':requirements_v2},ensure_ascii=False,indent=2),encoding='utf-8')

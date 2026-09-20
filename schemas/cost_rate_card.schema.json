@@ -1,0 +1,34 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://vivum.local/schemas/cost_rate_card.schema.json",
+  "title":"VIVUM Cost Rate Card",
+  "type":"object",
+  "required":["currency","materials","tools","logistics"],
+  "properties":{
+    "currency":{"type":"string","minLength":3},
+    "materials":{"type":"object","additionalProperties":{
+      "type":"object","properties":{
+        "name":{"type":"string"},
+        "pricingUnit":{"type":["string","null"]},
+        "unitCost":{"type":["number","null"],"minimum":0},
+        "source":{"type":["string","null"]},
+        "validFrom":{"type":["string","null"]}
+      }
+    }},
+    "tools":{"type":"object","additionalProperties":{
+      "type":"object","properties":{
+        "name":{"type":"string"},
+        "rateBasis":{"type":["string","null"],"enum":["hour","use","day","package",null]},
+        "unitCost":{"type":["number","null"],"minimum":0},
+        "source":{"type":["string","null"]}
+      }
+    }},
+    "logistics":{"type":"object","additionalProperties":{
+      "type":"object","properties":{
+        "name":{"type":"string"},
+        "pricingUnit":{"type":["string","null"]},
+        "unitCost":{"type":["number","null"],"minimum":0}
+      }
+    }}
+  }
+}

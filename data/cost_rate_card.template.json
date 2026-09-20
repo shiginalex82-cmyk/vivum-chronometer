@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.0",
+  "currency": "RUB",
+  "materials": {
+    "MT-2689-05": {
+      "name": "Коробка установочная С-3 блочная для твёрдых стен Ø68×60 со стыковочными узлами",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-27": {
+      "name": "Коробка для полых стен / ГКЛ / ГВЛ Ø68×45 Schneider Electric IMT35150",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-01": {
+      "name": "ВВГнг-LS 3×2,5(ож)-0,66 ГОСТ",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-02": {
+      "name": "ВВГ-LS 3×1,5",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-03": {
+      "name": "КГВВнг 5×0,75",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-04": {
+      "name": "КГВВнг(А)-LS 7×0,75",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-11": {
+      "name": "ВВГнг-LS 4×1,5(ож)-0,66 ГОСТ",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-36": {
+      "name": "КГВВнг 3×1,5",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-40": {
+      "name": "КГВВнг 3×2,5",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-06": {
+      "name": "Площадка под стяжку для прямого монтажа, чёрная",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-07": {
+      "name": "Стяжка нейлоновая КСС 3×150 ч",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-12": {
+      "name": "Гвоздь усиленный CN EG bullet point 3,05×17 мм",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-2689-30": {
+      "name": "Газовый баллон для монтажных пистолетов 165 мм",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-ALABASTER": {
+      "name": "Алебастр / быстротвердеющий гипсовый состав",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-GYPSUM": {
+      "name": "Гипсовая штукатурка / медленный монтажный состав",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-COMPOUND-OTHER": {
+      "name": "Иной согласованный монтажный состав",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-JBOX": {
+      "name": "Коммутационная коробка требуемого типа и размера",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-MARK": {
+      "name": "Материал для маркировки кабелей",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-GML": {
+      "name": "Гильза медная ГМЛ требуемого сечения",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-TTK": {
+      "name": "Трубка термоусаживаемая клеевая ТТК",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "MT-WAGO": {
+      "name": "Согласованная клемма типа WAGO для сети освещения",
+      "pricingUnit": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    }
+  },
+  "tools": {
+    "TL-LASER": {
+      "name": "Лазерный уровень / построитель плоскостей",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-TAPE": {
+      "name": "Рулетка",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-MARK": {
+      "name": "Разметочный инструмент",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-DRILL": {
+      "name": "Перфоратор / дрель",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-CROWN68": {
+      "name": "Коронка Ø68 для твёрдых стен",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-HOLLOW68": {
+      "name": "Инструмент/коронка для отверстий Ø68 в полых стенах",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-VAC": {
+      "name": "Промышленный пылесос",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-MIX": {
+      "name": "Ёмкость и инструмент для замешивания состава",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-GUN": {
+      "name": "Газовый монтажный пистолет",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-UNWIND": {
+      "name": "Устройство/место для размотки бухты кабеля",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-LABEL": {
+      "name": "Маркиратор / ручной комплект маркировки",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-STRIP": {
+      "name": "Инструмент для снятия оболочки и изоляции",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-CRIMP": {
+      "name": "Ручной или гидравлический пресс с матрицами",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-HEAT": {
+      "name": "Строительный фен либо газовая горелка",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-CHASE": {
+      "name": "Штроборез / резчик",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-CHISEL": {
+      "name": "Перфоратор/зубило для выборки штробы",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-HAND": {
+      "name": "Комплект ручного электромонтажного инструмента",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    },
+    "TL-ACCESS": {
+      "name": "Стремянка / подмости по высоте работ",
+      "rateBasis": null,
+      "unitCost": null,
+      "source": null,
+      "validFrom": null
+    }
+  },
+  "logistics": {
+    "SITE_DELIVERY_TRIP": {
+      "name": "Доставка на объект, рейс",
+      "pricingUnit": "рейс",
+      "unitCost": null
+    },
+    "VEHICLE_HOUR": {
+      "name": "Транспорт на объекте/между складами",
+      "pricingUnit": "маш·ч",
+      "unitCost": null
+    },
+    "EXTERNAL_DELIVERY": {
+      "name": "Внешняя доставка/курьер",
+      "pricingUnit": "услуга",
+      "unitCost": null
+    }
+  }
+}

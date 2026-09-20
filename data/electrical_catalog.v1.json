@@ -2890,6 +2890,13 @@
       "type": "compound"
     },
     {
+      "id": "MT-COMPOUND-OTHER",
+      "name": "Иной согласованный монтажный состав",
+      "source": "generic",
+      "position": null,
+      "type": "compound"
+    },
+    {
       "id": "MT-JBOX",
       "name": "Коммутационная коробка требуемого типа и размера",
       "source": "project",

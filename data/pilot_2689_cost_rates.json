@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "rateCardId": "PILOT-2689-2026-07-21",
+  "currency": "RUB",
+  "scope": "VIVUM electrical rough-installation pilot",
+  "sourceInvoice": "Счет №2689 от 21.07.2026",
+  "materials": {
+    "MT-2689-01": {
+      "name": "ВВГнг-LS 3×2,5(ож)-0,66 ГОСТ",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 1,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 116.05,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "3000722"
+    },
+    "MT-2689-02": {
+      "name": "ВВГ-LS 3×1,5 кабель",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 2,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 73.33,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "330315"
+    },
+    "MT-2689-03": {
+      "name": "КГВВнг 5×0,75 кабель",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 3,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 74.76,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "315045"
+    },
+    "MT-2689-04": {
+      "name": "КГВВнг(А)-LS 7×0,75 кабель",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 4,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 122.15,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "3954262"
+    },
+    "MT-2689-05": {
+      "name": "Коробка установочная СЗ блочная для твердых стен Ø68×60",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 5,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 11.97,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "1458052"
+    },
+    "MT-2689-06": {
+      "name": "Площадка под стяжку для прямого монтажа черная",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 6,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 3.5,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "130342"
+    },
+    "MT-2689-07": {
+      "name": "Стяжка нейлоновая КСС 3×150 ч",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 7,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 0.4846,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "459399",
+      "sourcePricingUnit": "упак",
+      "sourceUnitCost": 48.46,
+      "packageSize": 100,
+      "conversion": "48.46 ₽/упак ÷ 100 шт/упак"
+    },
+    "MT-2689-11": {
+      "name": "ВВГнг-LS 4×1,5(ож)-0,66 ГОСТ",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 11,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 102.4,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "3000751"
+    },
+    "MT-2689-12": {
+      "name": "Гвоздь усиленный CN EG bullet point 3,05×17 мм",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 12,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 1.45,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "621317"
+    },
+    "MT-2689-27": {
+      "name": "Коробка уст. 68×45 с/у г/к IMT35150 SchE",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 27,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 30.44,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "452492"
+    },
+    "MT-2689-30": {
+      "name": "Газовый баллон для монтажных пистолетов 165 мм",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 30,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 350.03,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "7308061"
+    },
+    "MT-2689-36": {
+      "name": "КГВВнг 3×1,5 кабель",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 36,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 97.75,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "315314"
+    },
+    "MT-2689-40": {
+      "name": "КГВВнг 3×2,5 кабель",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 40,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 146.63,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "315316"
+    }
+  },
+  "purchaseVariants": {
+    "MT-2689-08": {
+      "name": "Трубка ТТК-(3:1)-6/2 черная (КВТ)",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 8,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 38.94,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "5150711"
+    },
+    "MT-2689-09": {
+      "name": "Трубка ТТК (3:1)-9/3 черная",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 9,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "м",
+      "unitCost": 68.28,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "445447"
+    },
+    "MT-2689-33": {
+      "name": "Гильза медная луженая ГМЛ 2,5-2,6 ГОСТ 23469.3 IEK",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 33,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 12.12,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "231251"
+    },
+    "MT-2689-34": {
+      "name": "ГМЛ 4-3 (Техэл) Гильза медная",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 34,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 12.8,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "7001005"
+    },
+    "MT-2689-35": {
+      "name": "ГМЛ 6-4 (Техэл) Гильза медная",
+      "sourceInvoice": "Счет №2689 от 21.07.2026",
+      "invoicePosition": 35,
+      "supplier": "ООО \"ЭТМ \"КОСТРОМА ПЛЮС\"",
+      "pricingUnit": "шт",
+      "unitCost": 17.81,
+      "currency": "RUB",
+      "validFrom": "2026-07-21",
+      "supplierCode": "7001006"
+    }
+  },
+  "tools": {},
+  "logistics": {},
+  "notes": "Пилотные закупочные ставки. Не являются корпоративным прайсом. ГМЛ/ТТК используются только после выбора конкретного типоразмера."
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "currency": "RUB",
+  "risk": {
+    "method": null,
+    "percent": null,
+    "amount": null,
+    "base": "FULL_PRODUCTION_COST"
+  },
+  "profit": {
+    "method": null,
+    "percent": null,
+    "amount": null,
+    "base": "COST_PLUS_RISK"
+  },
+  "tax": {
+    "method": null,
+    "percent": null,
+    "amount": null,
+    "base": "PRICE_BEFORE_TAX"
+  },
+  "contractAdjustments": [],
+  "notes": "Для прибыли различаются MARKUP_PERCENT и TARGET_MARGIN_PERCENT. Значения 15 означают 15%."
+}

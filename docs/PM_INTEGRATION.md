@@ -42,3 +42,60 @@ JSON-контракт: `schemas/measurement_record.schema.json`.
 
 ## 7. Нормативная карточка
 После накопления наблюдений PM/сметный модуль связывает `measurementId` с `NormCard`. Контракт: `schemas/norm_card.schema.json`.
+## 8. Package Benchmark
+Массовые замеры агрегируются в отдельную сущность benchmark и не обновляют `NormCard` автоматически.
+
+Минимальные поля:
+- workPackageCode;
+- sampleSize;
+- medianPersonMinPerPrimary;
+- P25 / P75 / min / max;
+- medianLossRatio;
+- sourceMeasurementIds;
+- status;
+- normPublicationAllowed.
+
+По умолчанию `normPublicationAllowed=false` до инженерной проверки.
+
+## 9. Resource Requirement
+PM должен хранить семантику `REQUIRED / ONE_OF / ONE_OR_MORE_OF / CONDITIONAL`, а не только плоский список материалов.
+
+Контракт: `data/package_resource_requirements.v2.json` + `schemas/resource_requirements.schema.json`.
+## 10. Labor Estimate
+Расчёт трудовой себестоимости хранит ссылки на версии каталога, нормативов и ставок ролей.
+Неполный расчёт имеет `complete=false` и не может быть использован как готовая смета.
+
+## 11. Production Cost Estimate
+Отдельная сущность поверх Labor Estimate:
+- labor cost;
+- materials;
+- equipment/tool allocation;
+- logistics;
+- other direct costs;
+- allocated overhead;
+- knownPartialCost;
+- fullProductionCost;
+- complete/missing.
+
+Если `complete=false`, `fullProductionCost=null`.
+
+## 12. Commercial Price Estimate
+Отдельная сущность поверх полного Production Cost:
+- risk reserve;
+- profit method/value;
+- contract adjustments;
+- tax;
+- clientPrice;
+- commercial policy version.
+
+Если Production Cost неполон, Commercial Price не рассчитывается. PM не должен позволять коммерческому слою изменять NormCard, Measurement или Production Cost задним числом.
+
+## 13. Cost integrity guards
+Для материальной строки PM хранит `unit` и `costResponsibility = VIVUM / CUSTOMER / EXTERNAL`.
+PM не должен включать стоимость ресурсов `CUSTOMER/EXTERNAL` в себестоимость VIVUM без отдельного изменения ответственности.
+
+Перед публикацией Production/Commercial Estimate проверяются:
+- совпадение валют всех связанных версий;
+- совпадение единицы количества с единицей тарифа;
+- полнота обязательных ставок/политик;
+- отсутствие использования `knownPartialCost` как готовой сметы.

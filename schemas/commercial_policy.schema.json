@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivum.local/schemas/commercial_policy.schema.json",
+  "title": "VIVUM Commercial Policy",
+  "type": "object",
+  "required": [
+    "currency",
+    "risk",
+    "profit",
+    "tax"
+  ],
+  "properties": {
+    "currency": {
+      "type": "string",
+      "minLength": 3
+    },
+    "risk": {
+      "type": "object",
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "base": {
+          "type": "string"
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            null,
+            "NONE",
+            "PERCENT_FULL_COST",
+            "FIXED_AMOUNT"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "profit": {
+      "type": "object",
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "base": {
+          "type": "string"
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            null,
+            "NONE",
+            "MARKUP_PERCENT",
+            "TARGET_MARGIN_PERCENT",
+            "FIXED_AMOUNT"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "tax": {
+      "type": "object",
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "amount": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "base": {
+          "type": "string"
+        },
+        "method": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            null,
+            "NONE",
+            "PERCENT_PRICE_BEFORE_TAX",
+            "FIXED_AMOUNT"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "contractAdjustments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "method"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "ADD_FIXED",
+              "DISCOUNT_FIXED",
+              "ADD_PERCENT",
+              "DISCOUNT_PERCENT"
+            ]
+          },
+          "percent": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

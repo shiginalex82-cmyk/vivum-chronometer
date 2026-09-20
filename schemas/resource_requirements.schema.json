@@ -1,0 +1,38 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://vivum.local/schemas/resource_requirements.schema.json",
+  "title":"VIVUM Package Resource Requirements v2",
+  "type":"object",
+  "required":["schema_version","packages"],
+  "properties":{
+    "schema_version":{"const":"2.0"},
+    "packages":{"type":"array","items":{
+      "type":"object",
+      "required":["workPackageCode","tools","materials"],
+      "properties":{
+        "workPackageCode":{"type":"string","pattern":"^EL-RI-[0-9]{3}$"},
+        "name":{"type":"string"},
+        "tools":{"type":"array","items":{
+          "type":"object","required":["resourceId","mode"],
+          "properties":{
+            "resourceId":{"type":"string"},
+            "mode":{"enum":["REQUIRED_CAPABILITY","CONDITIONAL"]},
+            "note":{"type":"string"}
+          }
+        }},
+        "materials":{"type":"array","items":{
+          "type":"object","required":["requirementId","mode","resourceIds","consumptionStatus"],
+          "properties":{
+            "requirementId":{"type":"string"},
+            "mode":{"enum":["REQUIRED","ONE_OF","ONE_OR_MORE_OF"]},
+            "resourceIds":{"type":"array","minItems":1,"items":{"type":"string"}},
+            "quantityDriver":{"type":["string","null"]},
+            "multiplier":{"type":["number","null"],"minimum":0},
+            "consumptionStatus":{"type":"string"},
+            "note":{"type":"string"}
+          }
+        }}
+      }
+    }}
+  }
+}

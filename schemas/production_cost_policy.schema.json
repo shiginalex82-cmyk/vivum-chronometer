@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://vivum.local/schemas/production_cost_policy.schema.json",
+  "title":"VIVUM Production Cost Policy",
+  "type":"object",
+  "required":["currency","overhead"],
+  "properties":{
+    "currency":{"type":"string","minLength":3},
+    "overhead":{
+      "type":"object",
+      "required":["method"],
+      "properties":{
+        "method":{"type":["string","null"],"enum":["PERCENT_DIRECT_COST","FIXED_AMOUNT",null]},
+        "percent":{"type":["number","null"],"minimum":0},
+        "amount":{"type":["number","null"],"minimum":0},
+        "base":{"type":"string"},
+        "source":{"type":["string","null"]}
+      }
+    }
+  }
+}
