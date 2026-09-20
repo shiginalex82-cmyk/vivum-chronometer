@@ -1,0 +1,18 @@
+{
+  "currency": "RUB",
+  "version": 1,
+  "roles": {
+    "installer": {
+      "name": "Монтажник",
+      "hourlyCost": null
+    },
+    "engineer": {
+      "name": "Инженер",
+      "hourlyCost": null
+    },
+    "supply": {
+      "name": "Снабжение",
+      "hourlyCost": null
+    }
+  }
+}

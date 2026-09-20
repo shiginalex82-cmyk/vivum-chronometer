@@ -6,7 +6,7 @@ DOCS=ROOT/'docs'
 SCHEMA_VERSION='1.0'
 
 def op(code,pkg,seq,name,driver,scope,tools=None,materials=None,pre=None,qa=None,crew='1',notes=''):
-    return {'code':code,'package_code':pkg,'sequence':seq,'name':name,'time_class':'T_tech','quantity_driver':driver,'measurement_scope':scope,'crew_rule':crew,'tool_ids':tools or [],'material_ids':materials or [],'preconditions':pre or [],'qa':qa or [],'notes':notes}
+    return {'code':code,'package_code':pkg,'sequence':seq,'name':name,'time_class':'T_tech','role_id':'installer','quantity_driver':driver,'measurement_scope':scope,'crew_rule':crew,'tool_ids':tools or [],'material_ids':materials or [],'preconditions':pre or [],'qa':qa or [],'notes':notes}
 tools=[
  {'id':'TL-LASER','name':'Лазерный уровень / построитель плоскостей','category':'measurement'},
  {'id':'TL-TAPE','name':'Рулетка','category':'measurement'},
@@ -249,7 +249,7 @@ catalog={'schema_version':SCHEMA_VERSION,'discipline':'electrical','phase':'roug
 (DATA/'electrical_catalog.v1.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2),encoding='utf-8')
 (DATA/'norm_rules.v1.json').write_text(json.dumps(norm_rules,ensure_ascii=False,indent=2),encoding='utf-8')
 with (DATA/'electrical_operations.v1.csv').open('w',newline='',encoding='utf-8-sig') as f:
-    fields=['code','package_code','sequence','name','time_class','quantity_driver','measurement_scope','crew_rule','tool_ids','material_ids','preconditions','qa','notes']
+    fields=['code','package_code','sequence','name','time_class','role_id','quantity_driver','measurement_scope','crew_rule','tool_ids','material_ids','preconditions','qa','notes']
     w=csv.DictWriter(f,fieldnames=fields,delimiter=';'); w.writeheader()
     for x in ops:
         row=x.copy()
@@ -270,3 +270,33 @@ for p in packages:
     lines += ['', 'Не входит: '+('; '.join(p['exclusions']) if p['exclusions'] else '—'), '']
 (DOCS/'OPERATION_CATALOG.md').write_text('\n'.join(lines),encoding='utf-8')
 print('packages',len(packages),'operations',len(ops),'tools',len(tools),'materials',len(materials))
+
+# Templates for the future estimator. No invented norm values are populated.
+norm_template={'schema_version':'1.0','cards':[{
+    'normCardId':'NC-'+x['code'],'operationCode':x['code'],'driver':x['quantity_driver'],
+    'variantConditions':{},'sampleSize':0,'workerCount':0,'siteCount':0,
+    'medianPersonMin':None,'recommendedPersonMin':None,'status':'TEST','version':1,
+    'approvedBy':None,'approvedAt':None,'sourceMeasurementIds':[],'notes':''
+} for x in ops]}
+(DATA/'norm_cards.template.json').write_text(json.dumps(norm_template,ensure_ascii=False,indent=2),encoding='utf-8')
+rate_template={'currency':'RUB','version':1,'roles':{
+    'installer':{'name':'Монтажник','hourlyCost':None},
+    'engineer':{'name':'Инженер','hourlyCost':None},
+    'supply':{'name':'Снабжение','hourlyCost':None}
+}}
+(DATA/'rate_card.template.json').write_text(json.dumps(rate_template,ensure_ascii=False,indent=2),encoding='utf-8')
+
+# Resource matrix for readiness/supply checklists.
+requirements=[]
+for p in packages:
+    po=[x for x in ops if x['package_code']==p['code']]
+    tids=sorted({v for x in po for v in x['tool_ids']})
+    mids=sorted({v for x in po for v in x['material_ids']})
+    requirements.append({'workPackageCode':p['code'],'name':p['name'],'toolIds':tids,'materialIds':mids})
+(DATA/'package_resource_requirements.v1.json').write_text(json.dumps({'schema_version':'1.0','packages':requirements},ensure_ascii=False,indent=2),encoding='utf-8')
+with (DATA/'package_resource_matrix.v1.csv').open('w',newline='',encoding='utf-8-sig') as f:
+    w=csv.writer(f,delimiter=';'); w.writerow(['workPackageCode','packageName','resourceType','resourceId','resourceName'])
+    tool_by={x['id']:x for x in tools}; mat_by={x['id']:x for x in materials}
+    for r0 in requirements:
+        for tid in r0['toolIds']: w.writerow([r0['workPackageCode'],r0['name'],'tool',tid,tool_by[tid]['name']])
+        for mid in r0['materialIds']: w.writerow([r0['workPackageCode'],r0['name'],'material',mid,mat_by[mid]['name']])

@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "packages": [
+    {
+      "workPackageCode": "EL-RI-001",
+      "name": "Подрозетники — твёрдые оштукатуренные стены",
+      "toolIds": [
+        "TL-CROWN68",
+        "TL-DRILL",
+        "TL-HAND",
+        "TL-LASER",
+        "TL-MARK",
+        "TL-MIX",
+        "TL-TAPE",
+        "TL-VAC"
+      ],
+      "materialIds": [
+        "MT-2689-05",
+        "MT-ALABASTER",
+        "MT-GYPSUM"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-002",
+      "name": "Подрозетники — полые стены / каркасная система",
+      "toolIds": [
+        "TL-HAND",
+        "TL-HOLLOW68",
+        "TL-LASER",
+        "TL-MARK",
+        "TL-TAPE",
+        "TL-VAC"
+      ],
+      "materialIds": [
+        "MT-2689-27"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-003",
+      "name": "Кабель по потолку — одиночная линия",
+      "toolIds": [
+        "TL-ACCESS",
+        "TL-GUN",
+        "TL-HAND",
+        "TL-LABEL",
+        "TL-LASER",
+        "TL-MARK",
+        "TL-TAPE",
+        "TL-UNWIND"
+      ],
+      "materialIds": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-06",
+        "MT-2689-07",
+        "MT-2689-11",
+        "MT-2689-12",
+        "MT-2689-30",
+        "MT-2689-36",
+        "MT-2689-40",
+        "MT-MARK"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-004",
+      "name": "Кабель по потолку — группа линий / пучок",
+      "toolIds": [
+        "TL-ACCESS",
+        "TL-GUN",
+        "TL-HAND",
+        "TL-LABEL",
+        "TL-LASER",
+        "TL-MARK",
+        "TL-TAPE",
+        "TL-UNWIND"
+      ],
+      "materialIds": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-06",
+        "MT-2689-07",
+        "MT-2689-11",
+        "MT-2689-12",
+        "MT-2689-30",
+        "MT-2689-36",
+        "MT-2689-40",
+        "MT-MARK"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-005",
+      "name": "Коммутационная коробка — монтаж + завод и маркировка кабелей",
+      "toolIds": [
+        "TL-DRILL",
+        "TL-HAND",
+        "TL-LABEL",
+        "TL-LASER",
+        "TL-MARK",
+        "TL-TAPE"
+      ],
+      "materialIds": [
+        "MT-JBOX",
+        "MT-MARK"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-006",
+      "name": "Коммутация коробки розеточной сети",
+      "toolIds": [
+        "TL-CRIMP",
+        "TL-HAND",
+        "TL-HEAT",
+        "TL-STRIP"
+      ],
+      "materialIds": [
+        "MT-GML",
+        "MT-TTK"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-007",
+      "name": "Коммутация коробки освещения",
+      "toolIds": [
+        "TL-HAND",
+        "TL-STRIP"
+      ],
+      "materialIds": [
+        "MT-WAGO"
+      ]
+    },
+    {
+      "workPackageCode": "EL-RI-008",
+      "name": "Штробление — вертикальный опуск к подрозетнику",
+      "toolIds": [
+        "TL-CHASE",
+        "TL-CHISEL",
+        "TL-LASER",
+        "TL-MARK",
+        "TL-TAPE",
+        "TL-VAC"
+      ],
+      "materialIds": []
+    },
+    {
+      "workPackageCode": "EL-RI-009",
+      "name": "Заведение кабеля в подрозетник после фиксации",
+      "toolIds": [
+        "TL-HAND",
+        "TL-LABEL",
+        "TL-VAC"
+      ],
+      "materialIds": [
+        "MT-MARK"
+      ]
+    }
+  ]
+}

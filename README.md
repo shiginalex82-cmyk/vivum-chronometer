@@ -43,3 +43,7 @@ PWA-приложение для подготовки рабочего пакет
 - `python scripts/build_catalog.py` — пересобрать JSON/CSV и читаемый каталог.
 - `python scripts/validate_catalog_app.py` — проверить соответствие этапов приложения каталогу и синтаксис схем.
 - `docs/NORM_CARD_MODEL.md` — жизненный цикл и правила нормативной карточки.
+- `data/driver_rules.v1.json` — правила получения количественных драйверов операций.
+- `data/package_resource_requirements.v1.json` / `.csv` — инструменты и материалы по рабочим пакетам.
+- `docs/DRIVER_MODEL.md` — модель количественных драйверов.
+- `docs/ESTIMATOR_MODEL.md` — логика расчётчика трудоёмкости и стоимости.
