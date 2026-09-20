@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "policyId": "VIVUM-EL-CONS-001-v1",
+  "rules": {
+    "CR-COMPOUND-KG-PER-BOX": {
+      "status": "DRAFT",
+      "method": "MULTIPLIER",
+      "driver": "primary_qty",
+      "quantityUnit": "кг",
+      "quantityPerDriver": null,
+      "description": "Масса монтажного состава на один подрозетник."
+    },
+    "CR-CABLE-SINGLE-RESERVE": {
+      "status": "DRAFT",
+      "method": "CABLE_LENGTH_WITH_RESERVE",
+      "driver": "route_length",
+      "endDriver": "line_end_qty",
+      "quantityUnit": "м",
+      "reservePercent": null,
+      "endReserveM": null,
+      "description": "Проектная длина + процентный запас + запас на концах."
+    },
+    "CR-GAS-SHOTS-PER-CYLINDER": {
+      "status": "APPROVED",
+      "method": "RATIO",
+      "driver": "fastener_qty",
+      "quantityUnit": "шт",
+      "sourceUnitsPerResourceUnit": 1000,
+      "description": "Утверждено: 1 газовый баллон = 1000 выстрелов/точек крепления площадки гвоздём."
+    },
+    "CR-MARK-PER-END": {
+      "status": "DRAFT",
+      "method": "MULTIPLIER",
+      "driver": "line_end_qty",
+      "quantityUnit": null,
+      "quantityPerDriver": null,
+      "description": "Расход маркировочного материала на конец линии."
+    },
+    "CR-CABLE-BUNDLE-DIRECT": {
+      "status": "DRAFT",
+      "method": "DIRECT_SELECTED_QUANTITIES",
+      "quantityUnit": "м",
+      "description": "Для каждого кабеля пучка задаётся собственная итоговая длина."
+    },
+    "CR-MARK-PER-CABLE": {
+      "status": "DRAFT",
+      "method": "MULTIPLIER",
+      "driver": "secondary_qty",
+      "quantityUnit": null,
+      "quantityPerDriver": null,
+      "description": "Расход маркировочного материала на кабель."
+    },
+    "CR-TTK-M-PER-CONNECTION": {
+      "status": "DRAFT",
+      "method": "MULTIPLIER",
+      "driver": "secondary_qty",
+      "quantityUnit": "м",
+      "quantityPerDriver": null,
+      "description": "Длина клеевой ТТК на одно соединение."
+    }
+  },
+  "notes": "Действующая политика расхода пилота. Газ: 1 баллон на 1000 выстрелов. Остальные числовые правила остаются DRAFT до отдельного утверждения."
+}

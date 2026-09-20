@@ -242,8 +242,8 @@
           "quantityUnit": "шт",
           "multiplier": null,
           "consumptionRuleId": "CR-GAS-SHOTS-PER-CYLINDER",
-          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
-          "note": "Газовый баллон распределяется по подтверждённому ресурсу выстрелов."
+          "consumptionStatus": "APPROVED_RULE",
+          "note": "Газовый баллон: 1 шт. на 1000 выстрелов/точек крепления."
         },
         {
           "requirementId": "EL-RI-003-M06",
@@ -374,8 +374,8 @@
           "quantityUnit": "шт",
           "multiplier": null,
           "consumptionRuleId": "CR-GAS-SHOTS-PER-CYLINDER",
-          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
-          "note": ""
+          "consumptionStatus": "APPROVED_RULE",
+          "note": "Газовый баллон: 1 шт. на 1000 выстрелов/точек крепления."
         },
         {
           "requirementId": "EL-RI-004-M06",

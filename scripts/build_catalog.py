@@ -317,7 +317,7 @@ material_requirements={
    req('EL-RI-003-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1,unit='шт'),
    req('EL-RI-003-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1,unit='шт'),
    req('EL-RI-003-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1,unit='шт'),
-   req('EL-RI-003-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED','Газовый баллон распределяется по подтверждённому ресурсу выстрелов.',unit='шт',rule='CR-GAS-SHOTS-PER-CYLINDER'),
+   req('EL-RI-003-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'APPROVED_RULE','Газовый баллон: 1 шт. на 1000 выстрелов/точек крепления.',unit='шт',rule='CR-GAS-SHOTS-PER-CYLINDER'),
    req('EL-RI-003-M06','REQUIRED',['MT-MARK'],'line_end_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-END')
  ],
  'EL-RI-004':[
@@ -325,7 +325,7 @@ material_requirements={
    req('EL-RI-004-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1,unit='шт'),
    req('EL-RI-004-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1,unit='шт'),
    req('EL-RI-004-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1,unit='шт'),
-   req('EL-RI-004-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED',unit='шт',rule='CR-GAS-SHOTS-PER-CYLINDER'),
+   req('EL-RI-004-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'APPROVED_RULE','Газовый баллон: 1 шт. на 1000 выстрелов/точек крепления.',unit='шт',rule='CR-GAS-SHOTS-PER-CYLINDER'),
    req('EL-RI-004-M06','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-CABLE')
  ],
  'EL-RI-005':[

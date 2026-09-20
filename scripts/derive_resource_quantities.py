@@ -55,7 +55,7 @@ def policy_quantity(rule,drivers):
 
 def main():
     ap=argparse.ArgumentParser(description='VIVUM strict resource quantity derivation')
-    ap.add_argument('request'); ap.add_argument('--policy',default=str(ROOT/'data/consumption_policy.template.json')); ap.add_argument('--output')
+    ap.add_argument('request'); ap.add_argument('--policy',default=str(ROOT/'data/consumption_policy.v1.json')); ap.add_argument('--output')
     a=ap.parse_args(); request=load(a.request); policy=load(a.policy)
     requirements=load(ROOT/'data/package_resource_requirements.v2.json')
     package=next((x for x in requirements['packages'] if x['workPackageCode']==request['workPackageCode']),None)

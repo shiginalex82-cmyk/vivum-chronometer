@@ -76,3 +76,8 @@ for p0 in resources2['packages']:
         if x.get('consumptionRuleId'): assert x['consumptionRuleId'] in rule_ids
         if x.get('multiplier') is not None: assert x.get('quantityUnit')
 print('CONSUMPTION_CONTRACT_OK',len(rule_ids))
+
+cons=load('data/consumption_policy.v1.json')
+gas=cons['rules']['CR-GAS-SHOTS-PER-CYLINDER']
+assert gas['status']=='APPROVED' and gas['sourceUnitsPerResourceUnit']==1000
+print('GAS_CONSUMPTION_RULE_OK',gas['sourceUnitsPerResourceUnit'])
