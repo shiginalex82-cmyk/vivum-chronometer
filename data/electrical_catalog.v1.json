@@ -1,0 +1,2862 @@
+{
+  "schema_version": "1.0",
+  "discipline": "electrical",
+  "phase": "rough_installation_pilot",
+  "packages": [
+    {
+      "code": "EL-RI-001",
+      "key": "solid",
+      "name": "Подрозетники — твёрдые оштукатуренные стены",
+      "primary_unit": "подрозетник",
+      "secondary_unit": "блок",
+      "norm_basis": "primary_unit",
+      "start_boundary": "Зона принята; привязки известны; материалы и инструмент у рабочего места.",
+      "finish_boundary": "Коробки установлены, выровнены, закреплены, проконтролированы; локальная уборка завершена.",
+      "exclusions": [
+        "штроба под кабель",
+        "прокладка кабеля",
+        "завод кабеля после затвердевания",
+        "чистовой механизм"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-001-G01",
+          "name": "Разметка",
+          "operation_codes": [
+            "EL-RI-001-01",
+            "EL-RI-001-02"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G02",
+          "name": "Коронение отверстий",
+          "operation_codes": [
+            "EL-RI-001-03"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G03",
+          "name": "Подготовка отверстий",
+          "operation_codes": [
+            "EL-RI-001-04",
+            "EL-RI-001-05"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G04",
+          "name": "Подготовка состава",
+          "operation_codes": [
+            "EL-RI-001-07"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G05",
+          "name": "Установка подрозетников",
+          "operation_codes": [
+            "EL-RI-001-06",
+            "EL-RI-001-08"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G06",
+          "name": "Выравнивание",
+          "operation_codes": [
+            "EL-RI-001-09",
+            "EL-RI-001-10"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G07",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-001-11"
+          ]
+        },
+        {
+          "code": "EL-RI-001-G08",
+          "name": "Уборка",
+          "operation_codes": [
+            "EL-RI-001-12"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-001-01",
+        "EL-RI-001-02",
+        "EL-RI-001-03",
+        "EL-RI-001-04",
+        "EL-RI-001-05",
+        "EL-RI-001-06",
+        "EL-RI-001-07",
+        "EL-RI-001-08",
+        "EL-RI-001-09",
+        "EL-RI-001-10",
+        "EL-RI-001-11",
+        "EL-RI-001-12"
+      ]
+    },
+    {
+      "code": "EL-RI-002",
+      "key": "hollow",
+      "name": "Подрозетники — полые стены / каркасная система",
+      "primary_unit": "подрозетник",
+      "secondary_unit": "блок",
+      "norm_basis": "primary_unit",
+      "start_boundary": "Тип конструкции и привязки подтверждены.",
+      "finish_boundary": "Коробки штатно закреплены и проконтролированы.",
+      "exclusions": [
+        "прокладка кабеля",
+        "подключение механизма"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-002-G01",
+          "name": "Разметка",
+          "operation_codes": [
+            "EL-RI-002-01",
+            "EL-RI-002-02"
+          ]
+        },
+        {
+          "code": "EL-RI-002-G02",
+          "name": "Вырезание отверстий",
+          "operation_codes": [
+            "EL-RI-002-03"
+          ]
+        },
+        {
+          "code": "EL-RI-002-G03",
+          "name": "Подготовка отверстий",
+          "operation_codes": [
+            "EL-RI-002-04"
+          ]
+        },
+        {
+          "code": "EL-RI-002-G04",
+          "name": "Установка коробок",
+          "operation_codes": [
+            "EL-RI-002-05",
+            "EL-RI-002-06"
+          ]
+        },
+        {
+          "code": "EL-RI-002-G05",
+          "name": "Фиксация",
+          "operation_codes": [
+            "EL-RI-002-07",
+            "EL-RI-002-08"
+          ]
+        },
+        {
+          "code": "EL-RI-002-G06",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-002-09"
+          ]
+        },
+        {
+          "code": "EL-RI-002-G07",
+          "name": "Уборка",
+          "operation_codes": [
+            "EL-RI-002-10"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-002-01",
+        "EL-RI-002-02",
+        "EL-RI-002-03",
+        "EL-RI-002-04",
+        "EL-RI-002-05",
+        "EL-RI-002-06",
+        "EL-RI-002-07",
+        "EL-RI-002-08",
+        "EL-RI-002-09",
+        "EL-RI-002-10"
+      ]
+    },
+    {
+      "code": "EL-RI-003",
+      "key": "cable1",
+      "name": "Кабель по потолку — одиночная линия",
+      "primary_unit": "м линии",
+      "secondary_unit": "линия",
+      "norm_basis": "primary_unit",
+      "start_boundary": "Линия идентифицирована; бухта подготовлена; маршрут известен.",
+      "finish_boundary": "Линия проложена, закреплена, промаркирована и проверена.",
+      "exclusions": [
+        "изготовление проходок",
+        "коммутация концов",
+        "устройство кабельного лотка"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-003-G01",
+          "name": "Разметка креплений",
+          "operation_codes": [
+            "EL-RI-003-01",
+            "EL-RI-003-02"
+          ]
+        },
+        {
+          "code": "EL-RI-003-G02",
+          "name": "Пристрелка площадок",
+          "operation_codes": [
+            "EL-RI-003-03",
+            "EL-RI-003-04"
+          ]
+        },
+        {
+          "code": "EL-RI-003-G03",
+          "name": "Размотка / прокладка",
+          "operation_codes": [
+            "EL-RI-003-05",
+            "EL-RI-003-06"
+          ]
+        },
+        {
+          "code": "EL-RI-003-G04",
+          "name": "Крепление стяжками",
+          "operation_codes": [
+            "EL-RI-003-07"
+          ]
+        },
+        {
+          "code": "EL-RI-003-G05",
+          "name": "Маркировка",
+          "operation_codes": [
+            "EL-RI-003-08",
+            "EL-RI-003-09"
+          ]
+        },
+        {
+          "code": "EL-RI-003-G06",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-003-10"
+          ]
+        },
+        {
+          "code": "EL-RI-003-G07",
+          "name": "Завершение",
+          "operation_codes": [
+            "EL-RI-003-11"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-003-01",
+        "EL-RI-003-02",
+        "EL-RI-003-03",
+        "EL-RI-003-04",
+        "EL-RI-003-05",
+        "EL-RI-003-06",
+        "EL-RI-003-07",
+        "EL-RI-003-08",
+        "EL-RI-003-09",
+        "EL-RI-003-10",
+        "EL-RI-003-11"
+      ]
+    },
+    {
+      "code": "EL-RI-004",
+      "key": "cableBundle",
+      "name": "Кабель по потолку — группа линий / пучок",
+      "primary_unit": "м общего маршрута",
+      "secondary_unit": "линия в пучке",
+      "norm_basis": "primary_unit+secondary_parameter",
+      "start_boundary": "Состав группы и маркировка всех линий определены.",
+      "finish_boundary": "Группа проложена, закреплена; линии идентифицируемы.",
+      "exclusions": [
+        "коммутация",
+        "ответвления вне общего маршрута"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-004-G01",
+          "name": "Разметка креплений",
+          "operation_codes": [
+            "EL-RI-004-01",
+            "EL-RI-004-02"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G02",
+          "name": "Пристрелка площадок",
+          "operation_codes": [
+            "EL-RI-004-03",
+            "EL-RI-004-04"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G03",
+          "name": "Подготовка группы",
+          "operation_codes": [
+            "EL-RI-004-05",
+            "EL-RI-004-06"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G04",
+          "name": "Прокладка пучка",
+          "operation_codes": [
+            "EL-RI-004-07"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G05",
+          "name": "Крепление стяжками",
+          "operation_codes": [
+            "EL-RI-004-08"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G06",
+          "name": "Маркировка",
+          "operation_codes": [
+            "EL-RI-004-09",
+            "EL-RI-004-10"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G07",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-004-11"
+          ]
+        },
+        {
+          "code": "EL-RI-004-G08",
+          "name": "Завершение",
+          "operation_codes": [
+            "EL-RI-004-12"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-004-01",
+        "EL-RI-004-02",
+        "EL-RI-004-03",
+        "EL-RI-004-04",
+        "EL-RI-004-05",
+        "EL-RI-004-06",
+        "EL-RI-004-07",
+        "EL-RI-004-08",
+        "EL-RI-004-09",
+        "EL-RI-004-10",
+        "EL-RI-004-11",
+        "EL-RI-004-12"
+      ]
+    },
+    {
+      "code": "EL-RI-005",
+      "key": "boxInstall",
+      "name": "Коммутационная коробка — монтаж + завод и маркировка кабелей",
+      "primary_unit": "коробка",
+      "secondary_unit": "заведённый кабель",
+      "norm_basis": "primary_unit+secondary_parameter",
+      "start_boundary": "Место коробки и перечень кабелей заданы.",
+      "finish_boundary": "Коробка закреплена; кабели заведены с запасом и промаркированы.",
+      "exclusions": [
+        "соединение жил"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-005-G01",
+          "name": "Разметка",
+          "operation_codes": [
+            "EL-RI-005-01",
+            "EL-RI-005-02"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G02",
+          "name": "Крепление коробки",
+          "operation_codes": [
+            "EL-RI-005-03",
+            "EL-RI-005-04"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G03",
+          "name": "Подготовка вводов",
+          "operation_codes": [
+            "EL-RI-005-05"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G04",
+          "name": "Завод кабелей",
+          "operation_codes": [
+            "EL-RI-005-06",
+            "EL-RI-005-07"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G05",
+          "name": "Формирование запаса",
+          "operation_codes": [
+            "EL-RI-005-08"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G06",
+          "name": "Маркировка",
+          "operation_codes": [
+            "EL-RI-005-09"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G07",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-005-10"
+          ]
+        },
+        {
+          "code": "EL-RI-005-G08",
+          "name": "Завершение",
+          "operation_codes": [
+            "EL-RI-005-11"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-005-01",
+        "EL-RI-005-02",
+        "EL-RI-005-03",
+        "EL-RI-005-04",
+        "EL-RI-005-05",
+        "EL-RI-005-06",
+        "EL-RI-005-07",
+        "EL-RI-005-08",
+        "EL-RI-005-09",
+        "EL-RI-005-10",
+        "EL-RI-005-11"
+      ]
+    },
+    {
+      "code": "EL-RI-006",
+      "key": "boxSocket",
+      "name": "Коммутация коробки розеточной сети",
+      "primary_unit": "коробка",
+      "secondary_unit": "гильза/соединение",
+      "norm_basis": "primary_unit+secondary_parameter",
+      "start_boundary": "Маркировка сверена со схемой.",
+      "finish_boundary": "Соединения опрессованы, изолированы ТТК, уложены; коробка закрыта и проверена.",
+      "exclusions": [
+        "монтаж самой коробки",
+        "прокладка кабелей"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-006-G01",
+          "name": "Сверка маркировки",
+          "operation_codes": [
+            "EL-RI-006-01",
+            "EL-RI-006-02"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G02",
+          "name": "Разделка проводников",
+          "operation_codes": [
+            "EL-RI-006-03"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G03",
+          "name": "Подбор ГМЛ",
+          "operation_codes": [
+            "EL-RI-006-04"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G04",
+          "name": "Опрессовка",
+          "operation_codes": [
+            "EL-RI-006-05"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G05",
+          "name": "Монтаж ТТК",
+          "operation_codes": [
+            "EL-RI-006-06"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G06",
+          "name": "Термоусадка",
+          "operation_codes": [
+            "EL-RI-006-07"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G07",
+          "name": "Укладка соединений",
+          "operation_codes": [
+            "EL-RI-006-08",
+            "EL-RI-006-09"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G08",
+          "name": "Закрытие коробки",
+          "operation_codes": [
+            "EL-RI-006-10"
+          ]
+        },
+        {
+          "code": "EL-RI-006-G09",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-006-11"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-006-01",
+        "EL-RI-006-02",
+        "EL-RI-006-03",
+        "EL-RI-006-04",
+        "EL-RI-006-05",
+        "EL-RI-006-06",
+        "EL-RI-006-07",
+        "EL-RI-006-08",
+        "EL-RI-006-09",
+        "EL-RI-006-10",
+        "EL-RI-006-11"
+      ]
+    },
+    {
+      "code": "EL-RI-007",
+      "key": "boxLight",
+      "name": "Коммутация коробки освещения",
+      "primary_unit": "коробка",
+      "secondary_unit": "соединение",
+      "norm_basis": "primary_unit+secondary_parameter",
+      "start_boundary": "Маркировка и схема сверены.",
+      "finish_boundary": "Соединения выполнены клеммами, уложены; коробка закрыта и проверена.",
+      "exclusions": [
+        "монтаж самой коробки",
+        "прокладка кабелей"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-007-G01",
+          "name": "Сверка маркировки",
+          "operation_codes": [
+            "EL-RI-007-01",
+            "EL-RI-007-02"
+          ]
+        },
+        {
+          "code": "EL-RI-007-G02",
+          "name": "Разделка проводников",
+          "operation_codes": [
+            "EL-RI-007-03"
+          ]
+        },
+        {
+          "code": "EL-RI-007-G03",
+          "name": "Подготовка клемм",
+          "operation_codes": [
+            "EL-RI-007-04"
+          ]
+        },
+        {
+          "code": "EL-RI-007-G04",
+          "name": "Коммутация WAGO",
+          "operation_codes": [
+            "EL-RI-007-05",
+            "EL-RI-007-06"
+          ]
+        },
+        {
+          "code": "EL-RI-007-G05",
+          "name": "Укладка соединений",
+          "operation_codes": [
+            "EL-RI-007-07"
+          ]
+        },
+        {
+          "code": "EL-RI-007-G06",
+          "name": "Закрытие коробки",
+          "operation_codes": [
+            "EL-RI-007-08"
+          ]
+        },
+        {
+          "code": "EL-RI-007-G07",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-007-09"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-007-01",
+        "EL-RI-007-02",
+        "EL-RI-007-03",
+        "EL-RI-007-04",
+        "EL-RI-007-05",
+        "EL-RI-007-06",
+        "EL-RI-007-07",
+        "EL-RI-007-08",
+        "EL-RI-007-09"
+      ]
+    },
+    {
+      "code": "EL-RI-008",
+      "key": "chase",
+      "name": "Штробление — вертикальный опуск к подрозетнику",
+      "primary_unit": "м штробы",
+      "secondary_unit": "опуск",
+      "norm_basis": "primary_unit+fixed_per_drop",
+      "start_boundary": "Маршрут проверен и размечен; пылеудаление готово.",
+      "finish_boundary": "Штроба прорезана, выбрана, очищена и проверена.",
+      "exclusions": [
+        "отверстие под подрозетник",
+        "заделка штробы"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-008-G01",
+          "name": "Разметка",
+          "operation_codes": [
+            "EL-RI-008-01",
+            "EL-RI-008-02"
+          ]
+        },
+        {
+          "code": "EL-RI-008-G02",
+          "name": "Подготовка пылеудаления",
+          "operation_codes": [
+            "EL-RI-008-03"
+          ]
+        },
+        {
+          "code": "EL-RI-008-G03",
+          "name": "Резка штробы",
+          "operation_codes": [
+            "EL-RI-008-04"
+          ]
+        },
+        {
+          "code": "EL-RI-008-G04",
+          "name": "Выборка",
+          "operation_codes": [
+            "EL-RI-008-05",
+            "EL-RI-008-06"
+          ]
+        },
+        {
+          "code": "EL-RI-008-G05",
+          "name": "Очистка",
+          "operation_codes": [
+            "EL-RI-008-07"
+          ]
+        },
+        {
+          "code": "EL-RI-008-G06",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-008-08"
+          ]
+        },
+        {
+          "code": "EL-RI-008-G07",
+          "name": "Завершение",
+          "operation_codes": [
+            "EL-RI-008-09"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-008-01",
+        "EL-RI-008-02",
+        "EL-RI-008-03",
+        "EL-RI-008-04",
+        "EL-RI-008-05",
+        "EL-RI-008-06",
+        "EL-RI-008-07",
+        "EL-RI-008-08",
+        "EL-RI-008-09"
+      ]
+    },
+    {
+      "code": "EL-RI-009",
+      "key": "cableToBox",
+      "name": "Заведение кабеля в подрозетник после фиксации",
+      "primary_unit": "подрозетник",
+      "secondary_unit": "кабель",
+      "norm_basis": "primary_unit+secondary_parameter",
+      "start_boundary": "Монтажный состав набрал достаточную прочность.",
+      "finish_boundary": "Подрозетник очищен; кабель идентифицирован, заведён; запас и маркировка сформированы.",
+      "exclusions": [
+        "магистральная прокладка",
+        "подключение чистового механизма"
+      ],
+      "observation_groups": [
+        {
+          "code": "EL-RI-009-G01",
+          "name": "Проверка фиксации",
+          "operation_codes": [
+            "EL-RI-009-01"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G02",
+          "name": "Очистка подрозетника",
+          "operation_codes": [
+            "EL-RI-009-02"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G03",
+          "name": "Подготовка вводов",
+          "operation_codes": [
+            "EL-RI-009-03"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G04",
+          "name": "Идентификация кабеля",
+          "operation_codes": [
+            "EL-RI-009-04"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G05",
+          "name": "Завод кабеля",
+          "operation_codes": [
+            "EL-RI-009-05"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G06",
+          "name": "Формирование запаса",
+          "operation_codes": [
+            "EL-RI-009-06",
+            "EL-RI-009-07"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G07",
+          "name": "Маркировка",
+          "operation_codes": [
+            "EL-RI-009-08"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G08",
+          "name": "Контроль",
+          "operation_codes": [
+            "EL-RI-009-09"
+          ]
+        },
+        {
+          "code": "EL-RI-009-G09",
+          "name": "Завершение",
+          "operation_codes": [
+            "EL-RI-009-10"
+          ]
+        }
+      ],
+      "operation_codes": [
+        "EL-RI-009-01",
+        "EL-RI-009-02",
+        "EL-RI-009-03",
+        "EL-RI-009-04",
+        "EL-RI-009-05",
+        "EL-RI-009-06",
+        "EL-RI-009-07",
+        "EL-RI-009-08",
+        "EL-RI-009-09",
+        "EL-RI-009-10"
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "code": "EL-RI-001-01",
+      "package_code": "EL-RI-001",
+      "sequence": 1,
+      "name": "Разметить координаты, оси и высоту блока",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-TAPE",
+        "TL-MARK"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-02",
+      "package_code": "EL-RI-001",
+      "sequence": 2,
+      "name": "Проверить отсутствие конфликта в зоне сверления",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "актуальная привязка"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-03",
+      "package_code": "EL-RI-001",
+      "sequence": 3,
+      "name": "Прокоронить отверстие Ø68",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-DRILL",
+        "TL-CROWN68",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-04",
+      "package_code": "EL-RI-001",
+      "sequence": 4,
+      "name": "Удалить сердцевину и подготовить посадочное место",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-DRILL",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-05",
+      "package_code": "EL-RI-001",
+      "sequence": 5,
+      "name": "Очистить отверстие от пыли и крошки",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-06",
+      "package_code": "EL-RI-001",
+      "sequence": 6,
+      "name": "Собрать/подготовить блок подрозетников",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-2689-05"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-07",
+      "package_code": "EL-RI-001",
+      "sequence": 7,
+      "name": "Замешать монтажный состав",
+      "time_class": "T_tech",
+      "quantity_driver": "package_batch",
+      "measurement_scope": "BATCH",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-MIX"
+      ],
+      "material_ids": [
+        "MT-ALABASTER",
+        "MT-GYPSUM"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-08",
+      "package_code": "EL-RI-001",
+      "sequence": 8,
+      "name": "Установить подрозетник/блок на состав",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-MIX"
+      ],
+      "material_ids": [
+        "MT-2689-05",
+        "MT-ALABASTER",
+        "MT-GYPSUM"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-09",
+      "package_code": "EL-RI-001",
+      "sequence": 9,
+      "name": "Выставить горизонталь, глубину и межосевые расстояния",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-10",
+      "package_code": "EL-RI-001",
+      "sequence": 10,
+      "name": "Удалить излишки состава и очистить коробки",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-MIX"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-11",
+      "package_code": "EL-RI-001",
+      "sequence": 11,
+      "name": "Контроль геометрии и фиксации",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "координата",
+        "высота",
+        "горизонталь",
+        "глубина",
+        "жёсткость фиксации"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-001-12",
+      "package_code": "EL-RI-001",
+      "sequence": 12,
+      "name": "Локальная уборка зоны",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-01",
+      "package_code": "EL-RI-002",
+      "sequence": 1,
+      "name": "Разметить координаты, оси и высоту блока",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-TAPE",
+        "TL-MARK"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-02",
+      "package_code": "EL-RI-002",
+      "sequence": 2,
+      "name": "Проверить каркас и свободное пространство за листом",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "конструкция стены доступна для проверки"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-03",
+      "package_code": "EL-RI-002",
+      "sequence": 3,
+      "name": "Вырезать отверстие Ø68",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HOLLOW68",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-04",
+      "package_code": "EL-RI-002",
+      "sequence": 4,
+      "name": "Очистить и проверить кромку отверстия",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-05",
+      "package_code": "EL-RI-002",
+      "sequence": 5,
+      "name": "Подготовить коробку и вводы",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-2689-27"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-06",
+      "package_code": "EL-RI-002",
+      "sequence": 6,
+      "name": "Установить коробку в полую стену",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-2689-27"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-07",
+      "package_code": "EL-RI-002",
+      "sequence": 7,
+      "name": "Затянуть штатные лапки/фиксаторы",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-08",
+      "package_code": "EL-RI-002",
+      "sequence": 8,
+      "name": "Выставить положение блока",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-09",
+      "package_code": "EL-RI-002",
+      "sequence": 9,
+      "name": "Контроль геометрии и жёсткости",
+      "time_class": "T_tech",
+      "quantity_driver": "block_qty",
+      "measurement_scope": "PER_BLOCK",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "высота",
+        "горизонталь",
+        "глубина",
+        "жёсткость"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-002-10",
+      "package_code": "EL-RI-002",
+      "sequence": 10,
+      "name": "Локальная уборка зоны",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-01",
+      "package_code": "EL-RI-003",
+      "sequence": 1,
+      "name": "Сверить начало, конец, маркировку и маршрут линии",
+      "time_class": "T_tech",
+      "quantity_driver": "line_qty",
+      "measurement_scope": "PER_LINE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-TAPE"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "актуальное задание"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-02",
+      "package_code": "EL-RI-003",
+      "sequence": 2,
+      "name": "Разметить точки крепления по маршруту",
+      "time_class": "T_tech",
+      "quantity_driver": "route_length",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-TAPE",
+        "TL-MARK",
+        "TL-LASER"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-03",
+      "package_code": "EL-RI-003",
+      "sequence": 3,
+      "name": "Подготовить монтажный пистолет, площадки и расходники",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-GUN"
+      ],
+      "material_ids": [
+        "MT-2689-06",
+        "MT-2689-12",
+        "MT-2689-30"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-04",
+      "package_code": "EL-RI-003",
+      "sequence": 4,
+      "name": "Пристрелить площадки крепления",
+      "time_class": "T_tech",
+      "quantity_driver": "fastener_qty",
+      "measurement_scope": "PER_FASTENER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-GUN"
+      ],
+      "material_ids": [
+        "MT-2689-06",
+        "MT-2689-12",
+        "MT-2689-30"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-05",
+      "package_code": "EL-RI-003",
+      "sequence": 5,
+      "name": "Установить бухту/катушку на размотку",
+      "time_class": "T_tech",
+      "quantity_driver": "line_qty",
+      "measurement_scope": "PER_LINE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-UNWIND"
+      ],
+      "material_ids": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-11",
+        "MT-2689-36",
+        "MT-2689-40"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-06",
+      "package_code": "EL-RI-003",
+      "sequence": 6,
+      "name": "Размотать и проложить кабель по маршруту",
+      "time_class": "T_tech",
+      "quantity_driver": "route_length",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1; допускается 2 по массе/длине/условиям маршрута",
+      "tool_ids": [
+        "TL-UNWIND",
+        "TL-ACCESS"
+      ],
+      "material_ids": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-11",
+        "MT-2689-36",
+        "MT-2689-40"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-07",
+      "package_code": "EL-RI-003",
+      "sequence": 7,
+      "name": "Закрепить кабель стяжками на площадках",
+      "time_class": "T_tech",
+      "quantity_driver": "fastener_qty",
+      "measurement_scope": "PER_FASTENER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND",
+        "TL-ACCESS"
+      ],
+      "material_ids": [
+        "MT-2689-07"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-08",
+      "package_code": "EL-RI-003",
+      "sequence": 8,
+      "name": "Сформировать технологический запас на концах",
+      "time_class": "T_tech",
+      "quantity_driver": "line_end_qty",
+      "measurement_scope": "PER_LINE_END",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-09",
+      "package_code": "EL-RI-003",
+      "sequence": 9,
+      "name": "Промаркировать оба конца линии",
+      "time_class": "T_tech",
+      "quantity_driver": "line_end_qty",
+      "measurement_scope": "PER_LINE_END",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-10",
+      "package_code": "EL-RI-003",
+      "sequence": 10,
+      "name": "Контроль маршрута, крепления и маркировки",
+      "time_class": "T_tech",
+      "quantity_driver": "line_qty",
+      "measurement_scope": "PER_LINE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "маршрут",
+        "шаг крепления",
+        "отсутствие повреждений",
+        "маркировка"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-003-11",
+      "package_code": "EL-RI-003",
+      "sequence": 11,
+      "name": "Локальная уборка и перенос остатка бухты",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-01",
+      "package_code": "EL-RI-004",
+      "sequence": 1,
+      "name": "Сверить состав группы, маркировку и общий маршрут",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-TAPE"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "состав группы задан инженером"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-02",
+      "package_code": "EL-RI-004",
+      "sequence": 2,
+      "name": "Разметить точки крепления общего маршрута",
+      "time_class": "T_tech",
+      "quantity_driver": "route_length",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-TAPE",
+        "TL-MARK",
+        "TL-LASER"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-03",
+      "package_code": "EL-RI-004",
+      "sequence": 3,
+      "name": "Подготовить монтажный пистолет, площадки и расходники",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-GUN"
+      ],
+      "material_ids": [
+        "MT-2689-06",
+        "MT-2689-12",
+        "MT-2689-30"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-04",
+      "package_code": "EL-RI-004",
+      "sequence": 4,
+      "name": "Пристрелить площадки крепления",
+      "time_class": "T_tech",
+      "quantity_driver": "fastener_qty",
+      "measurement_scope": "PER_FASTENER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-GUN"
+      ],
+      "material_ids": [
+        "MT-2689-06",
+        "MT-2689-12",
+        "MT-2689-30"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-05",
+      "package_code": "EL-RI-004",
+      "sequence": 5,
+      "name": "Подготовить и идентифицировать бухты линий группы",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-UNWIND",
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-11",
+        "MT-2689-36",
+        "MT-2689-40",
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-06",
+      "package_code": "EL-RI-004",
+      "sequence": 6,
+      "name": "Сформировать управляемый пучок для прокладки",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-11",
+        "MT-2689-36",
+        "MT-2689-40"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-07",
+      "package_code": "EL-RI-004",
+      "sequence": 7,
+      "name": "Проложить группу кабелей по общему маршруту",
+      "time_class": "T_tech",
+      "quantity_driver": "route_length",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1–2 по числу/массе кабелей и условиям маршрута",
+      "tool_ids": [
+        "TL-UNWIND",
+        "TL-ACCESS"
+      ],
+      "material_ids": [
+        "MT-2689-01",
+        "MT-2689-02",
+        "MT-2689-03",
+        "MT-2689-04",
+        "MT-2689-11",
+        "MT-2689-36",
+        "MT-2689-40"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-08",
+      "package_code": "EL-RI-004",
+      "sequence": 8,
+      "name": "Закрепить пучок стяжками на площадках",
+      "time_class": "T_tech",
+      "quantity_driver": "fastener_qty",
+      "measurement_scope": "PER_FASTENER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND",
+        "TL-ACCESS"
+      ],
+      "material_ids": [
+        "MT-2689-07"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-09",
+      "package_code": "EL-RI-004",
+      "sequence": 9,
+      "name": "Разделить/сформировать технологические запасы линий на концах",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-10",
+      "package_code": "EL-RI-004",
+      "sequence": 10,
+      "name": "Промаркировать линии группы на концах",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-11",
+      "package_code": "EL-RI-004",
+      "sequence": 11,
+      "name": "Контроль состава, маршрута, крепления и идентификации",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "состав группы",
+        "маршрут",
+        "шаг крепления",
+        "маркировка",
+        "отсутствие повреждений"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-004-12",
+      "package_code": "EL-RI-004",
+      "sequence": 12,
+      "name": "Локальная уборка и перенос остатков материалов",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-01",
+      "package_code": "EL-RI-005",
+      "sequence": 1,
+      "name": "Сверить место, обозначение коробки и перечень кабелей",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-TAPE"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "актуальная схема/задание"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-02",
+      "package_code": "EL-RI-005",
+      "sequence": 2,
+      "name": "Разметить положение коробки и крепления",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-TAPE",
+        "TL-MARK"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-03",
+      "package_code": "EL-RI-005",
+      "sequence": 3,
+      "name": "Подготовить основание и крепёж",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-DRILL",
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-04",
+      "package_code": "EL-RI-005",
+      "sequence": 4,
+      "name": "Закрепить и выровнять коробку",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-DRILL",
+        "TL-HAND",
+        "TL-LASER"
+      ],
+      "material_ids": [
+        "MT-JBOX"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-05",
+      "package_code": "EL-RI-005",
+      "sequence": 5,
+      "name": "Подготовить кабельные вводы коробки",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-JBOX"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-06",
+      "package_code": "EL-RI-005",
+      "sequence": 6,
+      "name": "Идентифицировать кабель перед вводом",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-07",
+      "package_code": "EL-RI-005",
+      "sequence": 7,
+      "name": "Завести кабель в коробку",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-08",
+      "package_code": "EL-RI-005",
+      "sequence": 8,
+      "name": "Сформировать запас кабеля в коробке",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-09",
+      "package_code": "EL-RI-005",
+      "sequence": 9,
+      "name": "Промаркировать заведённый кабель",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-10",
+      "package_code": "EL-RI-005",
+      "sequence": 10,
+      "name": "Контроль крепления, вводов, запаса и маркировки",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "жёсткость коробки",
+        "кабель не повреждён",
+        "запас",
+        "маркировка"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-005-11",
+      "package_code": "EL-RI-005",
+      "sequence": 11,
+      "name": "Закрыть/защитить коробку до коммутации",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-01",
+      "package_code": "EL-RI-006",
+      "sequence": 1,
+      "name": "Сверить маркировку кабелей со схемой",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "схема коммутации"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-02",
+      "package_code": "EL-RI-006",
+      "sequence": 2,
+      "name": "Разложить проводники по группам соединений",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-03",
+      "package_code": "EL-RI-006",
+      "sequence": 3,
+      "name": "Снять оболочку и подготовить жилы",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-STRIP"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-04",
+      "package_code": "EL-RI-006",
+      "sequence": 4,
+      "name": "Подобрать ГМЛ по сечению и составу жил",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-GML"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-05",
+      "package_code": "EL-RI-006",
+      "sequence": 5,
+      "name": "Опрессовать соединение",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-CRIMP"
+      ],
+      "material_ids": [
+        "MT-GML"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-06",
+      "package_code": "EL-RI-006",
+      "sequence": 6,
+      "name": "Установить клеевую ТТК на соединение",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-TTK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-07",
+      "package_code": "EL-RI-006",
+      "sequence": 7,
+      "name": "Усадить ТТК феном/горелкой",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HEAT"
+      ],
+      "material_ids": [
+        "MT-TTK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-08",
+      "package_code": "EL-RI-006",
+      "sequence": 8,
+      "name": "Проверить качество опрессовки и изоляции",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "гильза деформирована корректно",
+        "нет оголённых участков",
+        "ТТК проклеена"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-09",
+      "package_code": "EL-RI-006",
+      "sequence": 9,
+      "name": "Уложить соединения и запасы в коробке",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-10",
+      "package_code": "EL-RI-006",
+      "sequence": 10,
+      "name": "Закрыть коробку",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-006-11",
+      "package_code": "EL-RI-006",
+      "sequence": 11,
+      "name": "Финальный визуальный контроль и фиксация результата",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "коробка закрыта",
+        "маркировка читаема",
+        "нет пережатия проводников"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-01",
+      "package_code": "EL-RI-007",
+      "sequence": 1,
+      "name": "Сверить маркировку кабелей со схемой",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "схема коммутации"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-02",
+      "package_code": "EL-RI-007",
+      "sequence": 2,
+      "name": "Разложить проводники по группам соединений",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-03",
+      "package_code": "EL-RI-007",
+      "sequence": 3,
+      "name": "Снять оболочку и подготовить жилы",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-STRIP"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-04",
+      "package_code": "EL-RI-007",
+      "sequence": 4,
+      "name": "Подобрать согласованную клемму WAGO",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-WAGO"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-05",
+      "package_code": "EL-RI-007",
+      "sequence": 5,
+      "name": "Выполнить коммутацию в клемме",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [
+        "MT-WAGO"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-06",
+      "package_code": "EL-RI-007",
+      "sequence": 6,
+      "name": "Проверить фиксацию проводников в клемме",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CONNECTION",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "жила вставлена до упора",
+        "нет оголённой меди вне клеммы"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-07",
+      "package_code": "EL-RI-007",
+      "sequence": 7,
+      "name": "Уложить соединения и запасы в коробке",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-08",
+      "package_code": "EL-RI-007",
+      "sequence": 8,
+      "name": "Закрыть коробку",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-007-09",
+      "package_code": "EL-RI-007",
+      "sequence": 9,
+      "name": "Финальный визуальный контроль",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_BOX",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "коробка закрыта",
+        "маркировка читаема",
+        "нет пережатия проводников"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-01",
+      "package_code": "EL-RI-008",
+      "sequence": 1,
+      "name": "Сверить вертикальный опуск и конечную точку",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_DROP",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-TAPE"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "актуальная трасса"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-02",
+      "package_code": "EL-RI-008",
+      "sequence": 2,
+      "name": "Разметить границы штробы",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LASER",
+        "TL-MARK"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-03",
+      "package_code": "EL-RI-008",
+      "sequence": 3,
+      "name": "Подготовить пылеудаление и защитить локальную зону",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-04",
+      "package_code": "EL-RI-008",
+      "sequence": 4,
+      "name": "Прорезать границы штробы",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-CHASE",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-05",
+      "package_code": "EL-RI-008",
+      "sequence": 5,
+      "name": "Выбрать материал между резами",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-CHISEL",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-06",
+      "package_code": "EL-RI-008",
+      "sequence": 6,
+      "name": "Доработать дно и края штробы",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-CHISEL"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-07",
+      "package_code": "EL-RI-008",
+      "sequence": 7,
+      "name": "Очистить штробу от пыли и крошки",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_METER",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-08",
+      "package_code": "EL-RI-008",
+      "sequence": 8,
+      "name": "Контроль глубины, ширины и маршрута",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_DROP",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-TAPE"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "маршрут",
+        "достаточная глубина",
+        "нет лишних повреждений"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-008-09",
+      "package_code": "EL-RI-008",
+      "sequence": 9,
+      "name": "Локальная уборка зоны",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-01",
+      "package_code": "EL-RI-009",
+      "sequence": 1,
+      "name": "Проверить достаточную прочность фиксации подрозетника",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [
+        "монтажный состав затвердел"
+      ],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-02",
+      "package_code": "EL-RI-009",
+      "sequence": 2,
+      "name": "Очистить подрозетник от монтажного состава",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND",
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-03",
+      "package_code": "EL-RI-009",
+      "sequence": 3,
+      "name": "Подготовить штатный ввод под кабель",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-04",
+      "package_code": "EL-RI-009",
+      "sequence": 4,
+      "name": "Идентифицировать требуемый кабель",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-05",
+      "package_code": "EL-RI-009",
+      "sequence": 5,
+      "name": "Завести кабель в подрозетник",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-06",
+      "package_code": "EL-RI-009",
+      "sequence": 6,
+      "name": "Сформировать технологический запас кабеля",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-07",
+      "package_code": "EL-RI-009",
+      "sequence": 7,
+      "name": "Уложить запас без повреждения изоляции",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-08",
+      "package_code": "EL-RI-009",
+      "sequence": 8,
+      "name": "Промаркировать кабель",
+      "time_class": "T_tech",
+      "quantity_driver": "secondary_qty",
+      "measurement_scope": "PER_CABLE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-LABEL"
+      ],
+      "material_ids": [
+        "MT-MARK"
+      ],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-09",
+      "package_code": "EL-RI-009",
+      "sequence": 9,
+      "name": "Контроль коробки, кабеля, запаса и маркировки",
+      "time_class": "T_tech",
+      "quantity_driver": "primary_qty",
+      "measurement_scope": "PER_UNIT",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-HAND"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [
+        "коробка не расшатана",
+        "изоляция не повреждена",
+        "запас достаточен",
+        "маркировка читаема"
+      ],
+      "notes": ""
+    },
+    {
+      "code": "EL-RI-009-10",
+      "package_code": "EL-RI-009",
+      "sequence": 10,
+      "name": "Локальная уборка",
+      "time_class": "T_tech",
+      "quantity_driver": "package",
+      "measurement_scope": "FIXED_PACKAGE",
+      "crew_rule": "1",
+      "tool_ids": [
+        "TL-VAC"
+      ],
+      "material_ids": [],
+      "preconditions": [],
+      "qa": [],
+      "notes": ""
+    }
+  ],
+  "tools": [
+    {
+      "id": "TL-LASER",
+      "name": "Лазерный уровень / построитель плоскостей",
+      "category": "measurement"
+    },
+    {
+      "id": "TL-TAPE",
+      "name": "Рулетка",
+      "category": "measurement"
+    },
+    {
+      "id": "TL-MARK",
+      "name": "Разметочный инструмент",
+      "category": "hand_tool"
+    },
+    {
+      "id": "TL-DRILL",
+      "name": "Перфоратор / дрель",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-CROWN68",
+      "name": "Коронка Ø68 для твёрдых стен",
+      "category": "consumable_tool"
+    },
+    {
+      "id": "TL-HOLLOW68",
+      "name": "Инструмент/коронка для отверстий Ø68 в полых стенах",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-VAC",
+      "name": "Промышленный пылесос",
+      "category": "equipment"
+    },
+    {
+      "id": "TL-MIX",
+      "name": "Ёмкость и инструмент для замешивания состава",
+      "category": "hand_tool"
+    },
+    {
+      "id": "TL-GUN",
+      "name": "Газовый монтажный пистолет",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-UNWIND",
+      "name": "Устройство/место для размотки бухты кабеля",
+      "category": "equipment"
+    },
+    {
+      "id": "TL-LABEL",
+      "name": "Маркиратор / ручной комплект маркировки",
+      "category": "hand_tool"
+    },
+    {
+      "id": "TL-STRIP",
+      "name": "Инструмент для снятия оболочки и изоляции",
+      "category": "hand_tool"
+    },
+    {
+      "id": "TL-CRIMP",
+      "name": "Ручной или гидравлический пресс с матрицами",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-HEAT",
+      "name": "Строительный фен либо газовая горелка",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-CHASE",
+      "name": "Штроборез / резчик",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-CHISEL",
+      "name": "Перфоратор/зубило для выборки штробы",
+      "category": "power_tool"
+    },
+    {
+      "id": "TL-HAND",
+      "name": "Комплект ручного электромонтажного инструмента",
+      "category": "hand_tool"
+    },
+    {
+      "id": "TL-ACCESS",
+      "name": "Стремянка / подмости по высоте работ",
+      "category": "access_equipment"
+    }
+  ],
+  "materials": [
+    {
+      "id": "MT-2689-05",
+      "name": "Коробка установочная С-3 блочная для твёрдых стен Ø68×60 со стыковочными узлами",
+      "source": "Счёт №2689",
+      "position": "5",
+      "type": "product"
+    },
+    {
+      "id": "MT-2689-27",
+      "name": "Коробка для полых стен / ГКЛ / ГВЛ Ø68×45 Schneider Electric IMT35150",
+      "source": "Счёт №2689",
+      "position": "27",
+      "type": "product"
+    },
+    {
+      "id": "MT-2689-01",
+      "name": "ВВГнг-LS 3×2,5(ож)-0,66 ГОСТ",
+      "source": "Счёт №2689",
+      "position": "1",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-02",
+      "name": "ВВГ-LS 3×1,5",
+      "source": "Счёт №2689",
+      "position": "2",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-03",
+      "name": "КГВВнг 5×0,75",
+      "source": "Счёт №2689",
+      "position": "3",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-04",
+      "name": "КГВВнг(А)-LS 7×0,75",
+      "source": "Счёт №2689",
+      "position": "4",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-11",
+      "name": "ВВГнг-LS 4×1,5(ож)-0,66 ГОСТ",
+      "source": "Счёт №2689",
+      "position": "11",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-36",
+      "name": "КГВВнг 3×1,5",
+      "source": "Счёт №2689",
+      "position": "36",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-40",
+      "name": "КГВВнг 3×2,5",
+      "source": "Счёт №2689",
+      "position": "40",
+      "type": "cable"
+    },
+    {
+      "id": "MT-2689-06",
+      "name": "Площадка под стяжку для прямого монтажа, чёрная",
+      "source": "Счёт №2689",
+      "position": "6",
+      "type": "fastener"
+    },
+    {
+      "id": "MT-2689-07",
+      "name": "Стяжка нейлоновая КСС 3×150 ч",
+      "source": "Счёт №2689",
+      "position": "7",
+      "type": "fastener"
+    },
+    {
+      "id": "MT-2689-12",
+      "name": "Гвоздь усиленный CN EG bullet point 3,05×17 мм",
+      "source": "Счёт №2689",
+      "position": "12",
+      "type": "fastener"
+    },
+    {
+      "id": "MT-2689-30",
+      "name": "Газовый баллон для монтажных пистолетов 165 мм",
+      "source": "Счёт №2689",
+      "position": "30",
+      "type": "consumable"
+    },
+    {
+      "id": "MT-ALABASTER",
+      "name": "Алебастр / быстротвердеющий гипсовый состав",
+      "source": "generic",
+      "position": null,
+      "type": "compound"
+    },
+    {
+      "id": "MT-GYPSUM",
+      "name": "Гипсовая штукатурка / медленный монтажный состав",
+      "source": "generic",
+      "position": null,
+      "type": "compound"
+    },
+    {
+      "id": "MT-JBOX",
+      "name": "Коммутационная коробка требуемого типа и размера",
+      "source": "project",
+      "position": null,
+      "type": "product"
+    },
+    {
+      "id": "MT-MARK",
+      "name": "Материал для маркировки кабелей",
+      "source": "generic",
+      "position": null,
+      "type": "consumable"
+    },
+    {
+      "id": "MT-GML",
+      "name": "Гильза медная ГМЛ требуемого сечения",
+      "source": "generic",
+      "position": null,
+      "type": "connector"
+    },
+    {
+      "id": "MT-TTK",
+      "name": "Трубка термоусаживаемая клеевая ТТК",
+      "source": "generic",
+      "position": null,
+      "type": "insulation"
+    },
+    {
+      "id": "MT-WAGO",
+      "name": "Согласованная клемма типа WAGO для сети освещения",
+      "source": "generic",
+      "position": null,
+      "type": "connector"
+    }
+  ],
+  "norm_rules": {
+    "schema_version": "1.0",
+    "time_categories": {
+      "T_supply_prep": "подготовка снабжения; не входит в технологическую норму",
+      "T_engineer_prep": "инженерная подготовка; не входит в технологическую норму",
+      "T_installer_prep": "локальная логистика и организация рабочего места до запуска пакета",
+      "T_tech": "производительное технологическое время внутри пакета",
+      "T_loss": "простои/организационные потери; не увеличивают технологическую норму",
+      "T_wait": "технологическая выдержка; календарное время, не человеко-часы"
+    },
+    "scope_rules": {
+      "FIXED_PACKAGE": "учитывается один раз на рабочий пакет",
+      "BATCH": "учитывается на одну фактическую партию/замес/подготовку партии",
+      "PER_UNIT": "умножается на primary_qty",
+      "PER_BLOCK": "умножается на число блоков",
+      "PER_METER": "умножается на измеренную длину маршрута/штробы",
+      "PER_LINE": "умножается на число линий",
+      "PER_LINE_END": "обычно 2 конца на линию; хранить фактическое число концов",
+      "PER_FASTENER": "умножается на фактическое число точек крепления",
+      "PER_CABLE": "умножается на фактическое число кабелей",
+      "PER_BOX": "умножается на число коробок",
+      "PER_CONNECTION": "умножается на число соединений",
+      "PER_DROP": "умножается на число вертикальных опусков"
+    },
+    "estimation_formula": "T_est_h = sum(norm_person_min_per_driver * driver_quantity) / 60",
+    "labor_cost_formula": "LaborCost = sum(T_role_h * Rate_role)",
+    "validation_rule": "Норма публикуется только по валидным наблюдениям; T_loss и T_wait исключаются из T_tech.",
+    "crew_rule": "Норма хранится в человеко-минутах. Если 2 человека работают 20 минут, трудоёмкость = 40 чел·мин; календарная длительность хранится отдельно."
+  }
+}

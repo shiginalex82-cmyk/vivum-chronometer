@@ -1,31 +1,44 @@
 # VIVUM — контракт интеграции с ProjectManagement
 
-## Сущность: Work Package
+## 1. Work Package
 Минимальные поля:
+- `workPackageCode` — стабильный код вида `EL-RI-001`;
 - object / zone / discipline;
 - workType;
-- quantity + unit;
-- installer / crew;
-- supplyPerson;
-- engineerPerson;
-- readiness checklist;
-- readinessAcceptedAt;
-- supplyPrepMin;
-- engineerPrepMin;
-- installerPrepMin;
+- quantity + unit + secondary quantity;
+- installer / crew + `crewSize`;
+- supplyPerson / engineerPerson;
+- readiness checklist + readinessAcceptedAt;
+- supplyPrepMin / engineerPrepMin / installerPrepMin;
 - technologicalProductiveTime;
-- lossTime;
-- lossReasons;
+- productivePersonTime;
+- lossTime / lossPersonTime / lossReasons;
 - operationTimes;
+- observationGroupTimes;
 - status.
 
-## Статусы
-DRAFT → SUPPLY_READY → ENGINEERING_READY → INSTALLER_ACCEPTED → IN_PROGRESS → COMPLETED.
+## 2. Measurement Record
+Каждый замер получает уникальный `measurementId`. Повторный импорт того же ID не должен создавать дубль.
 
-Если обязательный пункт готовности не закрыт, переход в IN_PROGRESS запрещён.
+Замер хранит `appVersion` и `catalogSchemaVersion`, чтобы результаты оставались воспроизводимыми после изменения технологии.
 
-## Правило источника истины
-ProjectManagement после интеграции хранит рабочий пакет и его статусы. Хронометраж является полевым интерфейсом ввода и не должен создавать параллельную карточку проекта.
+JSON-контракт: `schemas/measurement_record.schema.json`.
 
-## Правило расчёта
-Подготовительные минуты и технологический хронометраж передаются раздельными полями. Простои также передаются отдельно. Смешивать эти категории в одно «время работы» запрещено.
+## 3. Статусы
+`DRAFT → SUPPLY_READY → ENGINEERING_READY → INSTALLER_ACCEPTED → IN_PROGRESS → COMPLETED`.
+
+Если обязательный readiness-пункт не закрыт, переход в `IN_PROGRESS` запрещён.
+
+## 4. Источник истины
+После интеграции ProjectManagement хранит рабочий пакет, статусы, замеры и ссылки на нормативные карточки. PWA остаётся полевым интерфейсом ввода и не создаёт параллельный проектный реестр.
+
+## 5. Разделение времени
+Подготовительные минуты, технологическое время, человеко-время и простои передаются раздельными полями. Смешивать их в одно «время работы» запрещено.
+
+## 6. Каталог технологии
+Стабильный справочник: `data/electrical_catalog.v1.json`.
+
+Массовый хронометраж работает по `observation_groups`; детальная нормативная база — по `operations`. Один крупный этап может включать несколько детальных операций.
+
+## 7. Нормативная карточка
+После накопления наблюдений PM/сметный модуль связывает `measurementId` с `NormCard`. Контракт: `schemas/norm_card.schema.json`.
