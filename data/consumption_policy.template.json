@@ -51,12 +51,21 @@
       "description": "Расход маркировочного материала на кабель."
     },
     "CR-TTK-M-PER-CONNECTION": {
-      "status": "DRAFT",
+      "status": "RETIRED",
       "method": "MULTIPLIER",
       "driver": "secondary_qty",
       "quantityUnit": "м",
       "quantityPerDriver": null,
-      "description": "Длина клеевой ТТК на одно соединение."
+      "description": "Устаревшая модель: ТТК не нормируется напрямую на соединение."
+    },
+    "CR-TTK-FROM-GML": {
+      "status": "DRAFT",
+      "method": "DERIVED_FROM_UPSTREAM_RESOURCE",
+      "upstreamRequirementId": "EL-RI-006-M01",
+      "quantityUnit": "м",
+      "reserveBeforeMm": null,
+      "reserveAfterMm": null,
+      "description": "ТТК выбирается и рассчитывается по фактически выбранной ГМЛ: типоразмер/геометрия ГМЛ + запас перекрытия изоляции с двух сторон."
     }
   },
   "notes": "Шаблон без числовых норм. Автоматическое использование разрешено только для WORKING/APPROVED rules."

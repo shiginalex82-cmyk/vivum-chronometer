@@ -13,7 +13,7 @@ for p in cat['packages']:
     groups=[g['name'] for g in p['observation_groups']]
     if stages!=groups: raise RuntimeError(f"stage mismatch {p['code']}\napp={stages}\ncat={groups}")
 print('APP_STAGE_MAPPING_OK',len(cat['packages']))
-for f in ['measurement_record.schema.json','norm_card.schema.json','estimate_request.schema.json','production_cost_request.schema.json','production_cost_policy.schema.json','commercial_policy.schema.json','resource_requirements.schema.json','cost_rate_card.schema.json','resource_quantity_request.schema.json','resource_quantity_result.schema.json','consumption_policy.schema.json']:
+for f in ['measurement_record.schema.json','norm_card.schema.json','estimate_request.schema.json','production_cost_request.schema.json','production_cost_policy.schema.json','commercial_policy.schema.json','resource_requirements.schema.json','cost_rate_card.schema.json','resource_quantity_request.schema.json','resource_quantity_result.schema.json','consumption_policy.schema.json','future_electrical_connection_model.schema.json']:
     load('schemas/'+f)
 print('SCHEMAS_JSON_OK')
 norms=load('data/norm_cards.template.json')
@@ -81,3 +81,14 @@ cons=load('data/consumption_policy.v1.json')
 gas=cons['rules']['CR-GAS-SHOTS-PER-CYLINDER']
 assert gas['status']=='APPROVED' and gas['sourceUnitsPerResourceUnit']==1000
 print('GAS_CONSUMPTION_RULE_OK',gas['sourceUnitsPerResourceUnit'])
+
+# Future Revit connection contract: GML is project-derived; TTK derives from selected GML.
+el6=next(x for x in resources2['packages'] if x['workPackageCode']=='EL-RI-006')
+gml=next(x for x in el6['materials'] if x['requirementId']=='EL-RI-006-M01')
+ttk=next(x for x in el6['materials'] if x['requirementId']=='EL-RI-006-M02')
+assert gml.get('derivationMode')=='FUTURE_REVIT_CONNECTION_MODEL' and gml['consumptionStatus']=='PROJECT_MODEL_REQUIRED'
+assert ttk.get('derivationMode')=='DERIVED_FROM_REQUIREMENT' and ttk.get('dependsOnRequirementId')=='EL-RI-006-M01'
+assert ttk.get('consumptionRuleId')=='CR-TTK-FROM-GML' and ttk['consumptionStatus']=='UPSTREAM_RESOURCE_REQUIRED'
+cp=load('data/consumption_policy.v1.json'); tr=cp['rules']['CR-TTK-FROM-GML']
+assert tr['status']=='DRAFT' and tr['method']=='DERIVED_FROM_UPSTREAM_RESOURCE' and tr['reserveBeforeMm'] is None and tr['reserveAfterMm'] is None
+print('FUTURE_GML_TTK_CONTRACT_OK')

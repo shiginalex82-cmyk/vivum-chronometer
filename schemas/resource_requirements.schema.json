@@ -110,6 +110,23 @@
                     "string",
                     "null"
                   ]
+                },
+                "derivationMode": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "enum": [
+                    "FUTURE_REVIT_CONNECTION_MODEL",
+                    "DERIVED_FROM_REQUIREMENT",
+                    null
+                  ]
+                },
+                "dependsOnRequirementId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 }
               }
             }

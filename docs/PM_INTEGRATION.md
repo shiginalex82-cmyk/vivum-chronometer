@@ -116,3 +116,18 @@ PM не должен включать стоимость ресурсов `CUSTO
 PM не должен автоматически считать расход только потому, что ресурс присутствует в readiness-чек-листе. Неутверждённый consumption rule блокирует полный ресурсный расчёт.
 
 Production Cost Request может собираться автоматически только из `Resource Quantity Build` с `complete=true`; его `sourceResourceBuildIds` сохраняются для аудита.
+
+## 15. Future Electrical Connection Model
+Электрическое проектирование сейчас отложено. PM не должен требовать ручного ввода количества/типоразмера ГМЛ как постоянный источник истины.
+
+Будущий источник: `Revit/SHIGIN electrical topology`.
+
+Минимальная цепочка:
+`junction box → cable/core refs → connection groups → selected GML → derived TTK`.
+
+Для `EL-RI-006`:
+- `EL-RI-006-M01` имеет `FUTURE_REVIT_CONNECTION_MODEL`;
+- `EL-RI-006-M02` имеет `DERIVED_FROM_REQUIREMENT` и зависит от `EL-RI-006-M01`;
+- до появления проектных данных Production Cost остаётся неполным по этим ресурсам.
+
+Контракт: `schemas/future_electrical_connection_model.schema.json`.

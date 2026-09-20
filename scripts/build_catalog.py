@@ -1,6 +1,6 @@
 import json, csv
 from pathlib import Path
-ROOT=Path(r'C:\Temp\vivum-chronometer')
+ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data'; DATA.mkdir(exist_ok=True)
 DOCS=ROOT/'docs'
 SCHEMA_VERSION='1.0'
@@ -303,9 +303,12 @@ with (DATA/'package_resource_matrix.v1.csv').open('w',newline='',encoding='utf-8
         for mid in r0['materialIds']: w.writerow([r0['workPackageCode'],r0['name'],'material',mid,mat_by[mid]['name']])
 
 # Resource requirements v2: readiness semantics and future cost coverage.
-def req(rid,mode,resource_ids,driver=None,multiplier=None,status='DRAFT',note='',unit=None,rule=None):
-    return {'requirementId':rid,'mode':mode,'resourceIds':resource_ids,'quantityDriver':driver,
-            'quantityUnit':unit,'multiplier':multiplier,'consumptionRuleId':rule,'consumptionStatus':status,'note':note}
+def req(rid,mode,resource_ids,driver=None,multiplier=None,status='DRAFT',note='',unit=None,rule=None,derivation=None,depends=None):
+    x={'requirementId':rid,'mode':mode,'resourceIds':resource_ids,'quantityDriver':driver,
+       'quantityUnit':unit,'multiplier':multiplier,'consumptionRuleId':rule,'consumptionStatus':status,'note':note}
+    if derivation is not None: x['derivationMode']=derivation
+    if depends is not None: x['dependsOnRequirementId']=depends
+    return x
 material_requirements={
  'EL-RI-001':[
    req('EL-RI-001-M01','REQUIRED',['MT-2689-05'],'primary_qty',1,unit='шт'),
@@ -333,8 +336,8 @@ material_requirements={
    req('EL-RI-005-M02','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-CABLE')
  ],
  'EL-RI-006':[
-   req('EL-RI-006-M01','REQUIRED',['MT-GML'],'secondary_qty',1,unit='шт'),
-   req('EL-RI-006-M02','REQUIRED',['MT-TTK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED','Нужна длина ТТК на одно соединение.',unit='м',rule='CR-TTK-M-PER-CONNECTION')
+   req('EL-RI-006-M01','REQUIRED',['MT-GML'],None,None,'PROJECT_MODEL_REQUIRED','ГМЛ определяется из будущей Revit-модели: по группам соединяемых жил, их сечению и количеству.',unit='шт',derivation='FUTURE_REVIT_CONNECTION_MODEL'),
+   req('EL-RI-006-M02','REQUIRED',['MT-TTK'],None,None,'UPSTREAM_RESOURCE_REQUIRED','ТТК определяется по фактически выбранной ГМЛ с технологическим запасом; числовой запас пока не утверждён.',unit='м',rule='CR-TTK-FROM-GML',derivation='DERIVED_FROM_REQUIREMENT',depends='EL-RI-006-M01')
  ],
  'EL-RI-007':[req('EL-RI-007-M01','REQUIRED',['MT-WAGO'],'secondary_qty',1,unit='шт')],
  'EL-RI-008':[],

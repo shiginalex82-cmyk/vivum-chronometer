@@ -67,7 +67,12 @@ def main():
         responsibility=overrides.get(rid,request['defaultCostResponsibility'])
         for resource in selected:
             manual=manual_quantity(request,rid,resource); qty=None; unit=None; source=None; error=None
-            if manual:
+            derivation=rr.get('derivationMode')
+            if derivation=='FUTURE_REVIT_CONNECTION_MODEL':
+                error='project_model_input_required'
+            elif derivation=='DERIVED_FROM_REQUIREMENT':
+                error='upstream_resource_derivation_required:'+str(rr.get('dependsOnRequirementId'))
+            elif manual:
                 qty=float(manual['quantity']); unit=manual['unit']; source=manual['source']
                 if rr.get('quantityUnit') and unit!=rr['quantityUnit']: error='manual_unit_mismatch'
             elif rr.get('multiplier') is not None and rr.get('quantityDriver'):

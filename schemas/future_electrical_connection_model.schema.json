@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivum.local/schemas/future_electrical_connection_model.schema.json",
+  "title": "VIVUM Future Revit Electrical Connection Model",
+  "type": "object",
+  "required": ["sourceSystem", "projectId", "modelVersion", "junctionBoxes"],
+  "properties": {
+    "sourceSystem": {"const": "REVIT_SHIGIN_FUTURE"},
+    "projectId": {"type": "string", "minLength": 1},
+    "modelVersion": {"type": "string", "minLength": 1},
+    "junctionBoxes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revitElementId", "connectionGroups"],
+        "properties": {
+          "revitElementId": {"type": "string", "minLength": 1},
+          "connectionGroups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["connectionGroupId", "conductors", "gmlSelection", "ttkDerivation"],
+              "properties": {
+                "connectionGroupId": {"type": "string", "minLength": 1},
+                "electricalFunction": {"type": ["string", "null"]},
+                "conductors": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/conductor"}},
+                "gmlSelection": {"$ref": "#/$defs/gmlSelection"},
+                "ttkDerivation": {"$ref": "#/$defs/ttkDerivation"}
+              }
+            }
+          }
+        }
+      }
+    }
+  },  "$defs": {
+    "conductor": {
+      "type": "object",
+      "required": ["cableRef", "coreRef", "crossSectionMm2", "material"],
+      "properties": {
+        "cableRef": {"type": "string", "minLength": 1},
+        "coreRef": {"type": "string", "minLength": 1},
+        "crossSectionMm2": {"type": "number", "exclusiveMinimum": 0},
+        "material": {"type": "string", "minLength": 1}
+      }
+    },
+    "gmlSelection": {
+      "type": "object",
+      "required": ["status", "quantity"],
+      "properties": {
+        "status": {"enum": ["PROJECT_MODEL_REQUIRED", "SELECTED"]},
+        "quantity": {"type": ["integer", "null"], "minimum": 1},
+        "manufacturerRuleRef": {"type": ["string", "null"]},
+        "resourceId": {"type": ["string", "null"]},
+        "sizeCode": {"type": ["string", "null"]}
+      }
+    },
+    "ttkDerivation": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["UPSTREAM_RESOURCE_REQUIRED", "DERIVED"]},
+        "resourceId": {"type": ["string", "null"]},
+        "totalLengthM": {"type": ["number", "null"], "minimum": 0},
+        "reserveRuleRef": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -488,12 +488,13 @@
           "resourceIds": [
             "MT-GML"
           ],
-          "quantityDriver": "secondary_qty",
+          "quantityDriver": null,
           "quantityUnit": "шт",
-          "multiplier": 1,
+          "multiplier": null,
           "consumptionRuleId": null,
-          "consumptionStatus": "DRAFT",
-          "note": ""
+          "consumptionStatus": "PROJECT_MODEL_REQUIRED",
+          "note": "ГМЛ определяется из будущей Revit-модели: по группам соединяемых жил, их сечению и количеству.",
+          "derivationMode": "FUTURE_REVIT_CONNECTION_MODEL"
         },
         {
           "requirementId": "EL-RI-006-M02",
@@ -501,12 +502,14 @@
           "resourceIds": [
             "MT-TTK"
           ],
-          "quantityDriver": "secondary_qty",
+          "quantityDriver": null,
           "quantityUnit": "м",
           "multiplier": null,
-          "consumptionRuleId": "CR-TTK-M-PER-CONNECTION",
-          "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
-          "note": "Нужна длина ТТК на одно соединение."
+          "consumptionRuleId": "CR-TTK-FROM-GML",
+          "consumptionStatus": "UPSTREAM_RESOURCE_REQUIRED",
+          "note": "ТТК определяется по фактически выбранной ГМЛ с технологическим запасом; числовой запас пока не утверждён.",
+          "derivationMode": "DERIVED_FROM_REQUIREMENT",
+          "dependsOnRequirementId": "EL-RI-006-M01"
         }
       ]
     },

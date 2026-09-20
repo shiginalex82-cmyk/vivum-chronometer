@@ -3,30 +3,120 @@
   "$id": "https://vivum.local/schemas/consumption_policy.schema.json",
   "title": "VIVUM Consumption Policy",
   "type": "object",
-  "required": ["schema_version", "policyId", "rules"],
+  "required": [
+    "schema_version",
+    "policyId",
+    "rules"
+  ],
   "properties": {
-    "schema_version": {"type": "string"},
-    "policyId": {"type": "string", "minLength": 1},
+    "schema_version": {
+      "type": "string"
+    },
+    "policyId": {
+      "type": "string",
+      "minLength": 1
+    },
     "rules": {
       "type": "object",
       "additionalProperties": {
         "type": "object",
-        "required": ["status", "method"],
+        "required": [
+          "status",
+          "method"
+        ],
         "properties": {
-          "status": {"enum": ["DRAFT", "WORKING", "APPROVED", "RETIRED"]},
-          "method": {"enum": ["MULTIPLIER", "CABLE_LENGTH_WITH_RESERVE", "RATIO", "DIRECT_SELECTED_QUANTITIES"]},
-          "driver": {"type": ["string", "null"]},
-          "endDriver": {"type": ["string", "null"]},
-          "quantityUnit": {"type": ["string", "null"]},
-          "quantityPerDriver": {"type": ["number", "null"], "minimum": 0},
-          "reservePercent": {"type": ["number", "null"], "minimum": 0},
-          "endReserveM": {"type": ["number", "null"], "minimum": 0},
-          "sourceUnitsPerResourceUnit": {"type": ["number", "null"], "exclusiveMinimum": 0},
-          "description": {"type": "string"}
+          "status": {
+            "enum": [
+              "DRAFT",
+              "WORKING",
+              "APPROVED",
+              "RETIRED"
+            ]
+          },
+          "method": {
+            "enum": [
+              "MULTIPLIER",
+              "CABLE_LENGTH_WITH_RESERVE",
+              "RATIO",
+              "DIRECT_SELECTED_QUANTITIES",
+              "DERIVED_FROM_UPSTREAM_RESOURCE"
+            ]
+          },
+          "driver": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "endDriver": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quantityUnit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "quantityPerDriver": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "reservePercent": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "endReserveM": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "sourceUnitsPerResourceUnit": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "description": {
+            "type": "string"
+          },
+          "upstreamRequirementId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reserveBeforeMm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "reserveAfterMm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          }
         }
       }
     },
-    "notes": {"type": "string"}
+    "notes": {
+      "type": "string"
+    }
   },
   "additionalProperties": false
 }
