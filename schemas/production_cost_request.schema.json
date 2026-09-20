@@ -132,6 +132,14 @@
         },
         "additionalProperties": false
       }
+    },
+    "sourceResourceBuildIds": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   },
   "additionalProperties": false

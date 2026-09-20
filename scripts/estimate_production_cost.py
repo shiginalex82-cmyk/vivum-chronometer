@@ -17,6 +17,7 @@ def main():
     a=ap.parse_args()
     req=load(a.request); labor=load(a.labor); rates=load(a.rates); policy=load(a.policy)
     result={'productionEstimateId':req['productionEstimateId'],'laborEstimateId':labor.get('estimateId'),
+            'sourceResourceBuildIds':req.get('sourceResourceBuildIds',[]),
             'currency':rates.get('currency','RUB'),'complete':bool(labor.get('complete')),
             'missing':[],'components':{'labor':money(labor.get('laborCost',0)),'materials':[],
             'equipment':[],'logistics':[],'directCosts':[]},'overhead':None}

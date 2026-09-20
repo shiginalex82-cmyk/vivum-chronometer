@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivum.local/schemas/resource_quantity_request.schema.json",
+  "title": "VIVUM Resource Quantity Build Request",
+  "type": "object",
+  "required": ["resourceBuildId", "workPackageCode", "drivers", "defaultCostResponsibility"],
+  "properties": {
+    "resourceBuildId": {"type": "string", "minLength": 1},
+    "workPackageCode": {"type": "string", "pattern": "^EL-RI-[0-9]{3}$"},
+    "drivers": {
+      "type": "object",
+      "additionalProperties": {"type": "number", "minimum": 0}
+    },
+    "defaultCostResponsibility": {
+      "type": "string",
+      "enum": ["VIVUM", "CUSTOMER", "EXTERNAL"]
+    },
+    "costResponsibilityOverrides": {
+      "type": "object",
+      "additionalProperties": {"type": "string", "enum": ["VIVUM", "CUSTOMER", "EXTERNAL"]}
+    },
+    "selections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {"type": "string", "minLength": 1}
+      }
+    },
+    "manualQuantities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": ["resourceId", "quantity", "unit", "source"],
+          "properties": {
+            "resourceId": {"type": "string", "minLength": 1},
+            "quantity": {"type": "number", "minimum": 0},
+            "unit": {"type": "string", "minLength": 1},
+            "source": {"type": "string", "enum": ["MEASURED", "PROJECT", "MANUAL", "SUPPLIER_DATA"]}
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

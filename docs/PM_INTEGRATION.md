@@ -99,3 +99,20 @@ PM не должен включать стоимость ресурсов `CUSTO
 - совпадение единицы количества с единицей тарифа;
 - полнота обязательных ставок/политик;
 - отсутствие использования `knownPartialCost` как готовой сметы.
+
+## 14. Resource Quantity Build
+Между `ResourceRequirement` и `ProductionCostEstimate` вводится отдельный расчёт количества ресурсов.
+
+Минимальные поля:
+- resourceBuildId;
+- workPackageCode;
+- drivers;
+- выбранные альтернативы ресурсов;
+- версия Consumption Policy;
+- material resourceId / quantity / unit / costResponsibility;
+- source количества;
+- complete / missing.
+
+PM не должен автоматически считать расход только потому, что ресурс присутствует в readiness-чек-листе. Неутверждённый consumption rule блокирует полный ресурсный расчёт.
+
+Production Cost Request может собираться автоматически только из `Resource Quantity Build` с `complete=true`; его `sourceResourceBuildIds` сохраняются для аудита.

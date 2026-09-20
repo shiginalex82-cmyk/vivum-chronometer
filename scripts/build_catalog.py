@@ -303,48 +303,42 @@ with (DATA/'package_resource_matrix.v1.csv').open('w',newline='',encoding='utf-8
         for mid in r0['materialIds']: w.writerow([r0['workPackageCode'],r0['name'],'material',mid,mat_by[mid]['name']])
 
 # Resource requirements v2: readiness semantics and future cost coverage.
-def req(rid,mode,resource_ids,driver=None,multiplier=None,status='DRAFT',note=''):
+def req(rid,mode,resource_ids,driver=None,multiplier=None,status='DRAFT',note='',unit=None,rule=None):
     return {'requirementId':rid,'mode':mode,'resourceIds':resource_ids,'quantityDriver':driver,
-            'multiplier':multiplier,'consumptionStatus':status,'note':note}
+            'quantityUnit':unit,'multiplier':multiplier,'consumptionRuleId':rule,'consumptionStatus':status,'note':note}
 material_requirements={
  'EL-RI-001':[
-   req('EL-RI-001-M01','REQUIRED',['MT-2689-05'],'primary_qty',1),
-   req('EL-RI-001-M02','ONE_OF',['MT-ALABASTER','MT-GYPSUM','MT-COMPOUND-OTHER'],'package_batch',None,'MEASURE_REQUIRED','Расход состава определяется фактически/по утверждённой норме расхода.')
+   req('EL-RI-001-M01','REQUIRED',['MT-2689-05'],'primary_qty',1,unit='шт'),
+   req('EL-RI-001-M02','ONE_OF',['MT-ALABASTER','MT-GYPSUM','MT-COMPOUND-OTHER'],None,None,'MEASURE_REQUIRED','Расход состава определяется фактически/по утверждённой норме расхода.',unit='кг',rule='CR-COMPOUND-KG-PER-BOX')
  ],
- 'EL-RI-002':[
-   req('EL-RI-002-M01','REQUIRED',['MT-2689-27'],'primary_qty',1)
- ],
+ 'EL-RI-002':[req('EL-RI-002-M01','REQUIRED',['MT-2689-27'],'primary_qty',1,unit='шт')],
  'EL-RI-003':[
-   req('EL-RI-003-M01','ONE_OF',CABLE_IDS,'route_length',None,'RESERVE_RULE_REQUIRED','Выбирается кабель конкретной линии; требуется правило запаса.'),
-   req('EL-RI-003-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1),
-   req('EL-RI-003-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1),
-   req('EL-RI-003-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1),
-   req('EL-RI-003-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED','Газовый баллон нормируется через фактический расход/ресурс баллона.'),
-   req('EL-RI-003-M06','REQUIRED',['MT-MARK'],'line_end_qty',None,'CONSUMPTION_RULE_REQUIRED')
+   req('EL-RI-003-M01','ONE_OF',CABLE_IDS,'route_length',None,'RESERVE_RULE_REQUIRED','Выбирается кабель конкретной линии; требуется правило запаса.',unit='м',rule='CR-CABLE-SINGLE-RESERVE'),
+   req('EL-RI-003-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1,unit='шт'),
+   req('EL-RI-003-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1,unit='шт'),
+   req('EL-RI-003-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1,unit='шт'),
+   req('EL-RI-003-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED','Газовый баллон распределяется по подтверждённому ресурсу выстрелов.',unit='шт',rule='CR-GAS-SHOTS-PER-CYLINDER'),
+   req('EL-RI-003-M06','REQUIRED',['MT-MARK'],'line_end_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-END')
  ],
  'EL-RI-004':[
-   req('EL-RI-004-M01','ONE_OR_MORE_OF',CABLE_IDS,None,None,'FORMULA_REQUIRED','Количество = сумма длин выбранных линий с утверждёнными запасами.'),
-   req('EL-RI-004-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1),
-   req('EL-RI-004-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1),
-   req('EL-RI-004-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1),
-   req('EL-RI-004-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED'),
-   req('EL-RI-004-M06','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED')
+   req('EL-RI-004-M01','ONE_OR_MORE_OF',CABLE_IDS,None,None,'FORMULA_REQUIRED','Для каждого выбранного кабеля требуется собственная длина с запасом.',unit='м',rule='CR-CABLE-BUNDLE-DIRECT'),
+   req('EL-RI-004-M02','REQUIRED',['MT-2689-06'],'fastener_qty',1,unit='шт'),
+   req('EL-RI-004-M03','REQUIRED',['MT-2689-07'],'fastener_qty',1,unit='шт'),
+   req('EL-RI-004-M04','REQUIRED',['MT-2689-12'],'fastener_qty',1,unit='шт'),
+   req('EL-RI-004-M05','REQUIRED',['MT-2689-30'],'fastener_qty',None,'CONSUMPTION_RULE_REQUIRED',unit='шт',rule='CR-GAS-SHOTS-PER-CYLINDER'),
+   req('EL-RI-004-M06','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-CABLE')
  ],
  'EL-RI-005':[
-   req('EL-RI-005-M01','REQUIRED',['MT-JBOX'],'primary_qty',1),
-   req('EL-RI-005-M02','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED')
+   req('EL-RI-005-M01','REQUIRED',['MT-JBOX'],'primary_qty',1,unit='шт'),
+   req('EL-RI-005-M02','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-CABLE')
  ],
  'EL-RI-006':[
-   req('EL-RI-006-M01','REQUIRED',['MT-GML'],'secondary_qty',1),
-   req('EL-RI-006-M02','REQUIRED',['MT-TTK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED','Нужна длина ТТК на одно соединение.')
+   req('EL-RI-006-M01','REQUIRED',['MT-GML'],'secondary_qty',1,unit='шт'),
+   req('EL-RI-006-M02','REQUIRED',['MT-TTK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED','Нужна длина ТТК на одно соединение.',unit='м',rule='CR-TTK-M-PER-CONNECTION')
  ],
- 'EL-RI-007':[
-   req('EL-RI-007-M01','REQUIRED',['MT-WAGO'],'secondary_qty',1)
- ],
+ 'EL-RI-007':[req('EL-RI-007-M01','REQUIRED',['MT-WAGO'],'secondary_qty',1,unit='шт')],
  'EL-RI-008':[],
- 'EL-RI-009':[
-   req('EL-RI-009-M01','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED')
- ]
+ 'EL-RI-009':[req('EL-RI-009-M01','REQUIRED',['MT-MARK'],'secondary_qty',None,'CONSUMPTION_RULE_REQUIRED',unit=None,rule='CR-MARK-PER-CABLE')]
 }
 requirements_v2=[]
 for p in packages:

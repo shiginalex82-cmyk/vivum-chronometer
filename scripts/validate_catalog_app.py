@@ -13,7 +13,7 @@ for p in cat['packages']:
     groups=[g['name'] for g in p['observation_groups']]
     if stages!=groups: raise RuntimeError(f"stage mismatch {p['code']}\napp={stages}\ncat={groups}")
 print('APP_STAGE_MAPPING_OK',len(cat['packages']))
-for f in ['measurement_record.schema.json','norm_card.schema.json','estimate_request.schema.json','production_cost_request.schema.json','production_cost_policy.schema.json','commercial_policy.schema.json','resource_requirements.schema.json','cost_rate_card.schema.json']:
+for f in ['measurement_record.schema.json','norm_card.schema.json','estimate_request.schema.json','production_cost_request.schema.json','production_cost_policy.schema.json','commercial_policy.schema.json','resource_requirements.schema.json','cost_rate_card.schema.json','resource_quantity_request.schema.json','resource_quantity_result.schema.json','consumption_policy.schema.json']:
     load('schemas/'+f)
 print('SCHEMAS_JSON_OK')
 norms=load('data/norm_cards.template.json')
@@ -68,3 +68,11 @@ assert pilot['materials']['MT-2689-07']['pricingUnit']=='шт'
 assert abs(pilot['materials']['MT-2689-07']['unitCost']*100-48.46)<1e-9
 assert len(pilot['purchaseVariants'])==5
 print('PILOT_2689_RATES_OK',len(pilot['materials']),len(pilot['purchaseVariants']))
+
+consumption=load('data/consumption_policy.template.json')
+rule_ids=set(consumption['rules'])
+for p0 in resources2['packages']:
+    for x in p0['materials']:
+        if x.get('consumptionRuleId'): assert x['consumptionRuleId'] in rule_ids
+        if x.get('multiplier') is not None: assert x.get('quantityUnit')
+print('CONSUMPTION_CONTRACT_OK',len(rule_ids))

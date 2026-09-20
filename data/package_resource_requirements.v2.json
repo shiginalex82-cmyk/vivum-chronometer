@@ -54,7 +54,9 @@
             "MT-2689-05"
           ],
           "quantityDriver": "primary_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -66,8 +68,10 @@
             "MT-GYPSUM",
             "MT-COMPOUND-OTHER"
           ],
-          "quantityDriver": "package_batch",
+          "quantityDriver": null,
+          "quantityUnit": "кг",
           "multiplier": null,
+          "consumptionRuleId": "CR-COMPOUND-KG-PER-BOX",
           "consumptionStatus": "MEASURE_REQUIRED",
           "note": "Расход состава определяется фактически/по утверждённой норме расхода."
         }
@@ -116,7 +120,9 @@
             "MT-2689-27"
           ],
           "quantityDriver": "primary_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         }
@@ -181,7 +187,9 @@
             "MT-2689-40"
           ],
           "quantityDriver": "route_length",
+          "quantityUnit": "м",
           "multiplier": null,
+          "consumptionRuleId": "CR-CABLE-SINGLE-RESERVE",
           "consumptionStatus": "RESERVE_RULE_REQUIRED",
           "note": "Выбирается кабель конкретной линии; требуется правило запаса."
         },
@@ -192,7 +200,9 @@
             "MT-2689-06"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -203,7 +213,9 @@
             "MT-2689-07"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -214,7 +226,9 @@
             "MT-2689-12"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -225,9 +239,11 @@
             "MT-2689-30"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": null,
+          "consumptionRuleId": "CR-GAS-SHOTS-PER-CYLINDER",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
-          "note": "Газовый баллон нормируется через фактический расход/ресурс баллона."
+          "note": "Газовый баллон распределяется по подтверждённому ресурсу выстрелов."
         },
         {
           "requirementId": "EL-RI-003-M06",
@@ -236,7 +252,9 @@
             "MT-MARK"
           ],
           "quantityDriver": "line_end_qty",
+          "quantityUnit": null,
           "multiplier": null,
+          "consumptionRuleId": "CR-MARK-PER-END",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
           "note": ""
         }
@@ -301,9 +319,11 @@
             "MT-2689-40"
           ],
           "quantityDriver": null,
+          "quantityUnit": "м",
           "multiplier": null,
+          "consumptionRuleId": "CR-CABLE-BUNDLE-DIRECT",
           "consumptionStatus": "FORMULA_REQUIRED",
-          "note": "Количество = сумма длин выбранных линий с утверждёнными запасами."
+          "note": "Для каждого выбранного кабеля требуется собственная длина с запасом."
         },
         {
           "requirementId": "EL-RI-004-M02",
@@ -312,7 +332,9 @@
             "MT-2689-06"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -323,7 +345,9 @@
             "MT-2689-07"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -334,7 +358,9 @@
             "MT-2689-12"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -345,7 +371,9 @@
             "MT-2689-30"
           ],
           "quantityDriver": "fastener_qty",
+          "quantityUnit": "шт",
           "multiplier": null,
+          "consumptionRuleId": "CR-GAS-SHOTS-PER-CYLINDER",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
           "note": ""
         },
@@ -356,7 +384,9 @@
             "MT-MARK"
           ],
           "quantityDriver": "secondary_qty",
+          "quantityUnit": null,
           "multiplier": null,
+          "consumptionRuleId": "CR-MARK-PER-CABLE",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
           "note": ""
         }
@@ -405,7 +435,9 @@
             "MT-JBOX"
           ],
           "quantityDriver": "primary_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -416,7 +448,9 @@
             "MT-MARK"
           ],
           "quantityDriver": "secondary_qty",
+          "quantityUnit": null,
           "multiplier": null,
+          "consumptionRuleId": "CR-MARK-PER-CABLE",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
           "note": ""
         }
@@ -455,7 +489,9 @@
             "MT-GML"
           ],
           "quantityDriver": "secondary_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         },
@@ -466,7 +502,9 @@
             "MT-TTK"
           ],
           "quantityDriver": "secondary_qty",
+          "quantityUnit": "м",
           "multiplier": null,
+          "consumptionRuleId": "CR-TTK-M-PER-CONNECTION",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
           "note": "Нужна длина ТТК на одно соединение."
         }
@@ -495,7 +533,9 @@
             "MT-WAGO"
           ],
           "quantityDriver": "secondary_qty",
+          "quantityUnit": "шт",
           "multiplier": 1,
+          "consumptionRuleId": null,
           "consumptionStatus": "DRAFT",
           "note": ""
         }
@@ -566,7 +606,9 @@
             "MT-MARK"
           ],
           "quantityDriver": "secondary_qty",
+          "quantityUnit": null,
           "multiplier": null,
+          "consumptionRuleId": "CR-MARK-PER-CABLE",
           "consumptionStatus": "CONSUMPTION_RULE_REQUIRED",
           "note": ""
         }
